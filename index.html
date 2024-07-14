@@ -10,167 +10,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,900;1,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header-top">
-        <div class="container flex header-top__container"><a class="header-top__logo" href="./index.html"><img src="img/logo.svg" alt="logo"></a><a class="flex header-top__info header-top__info--location" href=""><span class="icon flex"> 
-              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 21.5C12.0303 21.5 18.0303 15.2 18.0303 9.5C18.0303 6.18629 15.344 3.5 12.0303 3.5C8.71656 3.5 6.03027 6.18629 6.03027 9.5C6.03027 15.2 12.0303 21.5 12.0303 21.5Z" stroke="currentColor" stroke-width="2"></path>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0303 10.5C12.5826 10.5 13.0303 10.0523 13.0303 9.5C13.0303 8.94772 12.5826 8.5 12.0303 8.5C11.478 8.5 11.0303 8.94772 11.0303 9.5C11.0303 10.0523 11.478 10.5 12.0303 10.5Z" stroke="currentColor" stroke-width="2"></path>
-              </svg></span><span class="text">Гомель, Кирова,35</span></a>
-          <div class="header-top__info header-top__info--phone flex"> <span class="icon flex">
-              <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.54 2.5C3.6 3.39 3.75 4.26 3.99 5.09L2.79 6.29C2.38 5.09 2.12 3.82 2.03 2.5H3.54V2.5ZM13.4 14.52C14.25 14.76 15.12 14.91 16 14.97V16.46C14.68 16.37 13.41 16.11 12.2 15.71L13.4 14.52V14.52ZM4.5 0.5H1C0.45 0.5 0 0.95 0 1.5C0 10.89 7.61 18.5 17 18.5C17.55 18.5 18 18.05 18 17.5V14.01C18 13.46 17.55 13.01 17 13.01C15.76 13.01 14.55 12.81 13.43 12.44C13.33 12.4 13.22 12.39 13.12 12.39C12.86 12.39 12.61 12.49 12.41 12.68L10.21 14.88C7.38 13.43 5.06 11.12 3.62 8.29L5.82 6.09C6.1 5.81 6.18 5.42 6.07 5.07C5.7 3.95 5.5 2.75 5.5 1.5C5.5 0.95 5.05 0.5 4.5 0.5Z" fill="currentColor"></path>
-              </svg></span><a href="#">8 (0232) 32-51-31</a><a href="#">+375 (29) 984-27-37 </a></div>
-          <div class="header-top__info header-top__info--time flex"><span class="icon flex"> 
-              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z" stroke="currentColor" stroke-width="2"></path>
-                <path d="M12 5.5V12.5L16 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              </svg></span><span class="text">
-               Пн - Пт (9.00 - 18.00); <br>сб, вс - вых.</span></div>
-          <div class="burger-menu"> <span> </span><span> </span><span> </span></div>
-        </div>
-      </div>
-      <div class="header-bottom">
-        <div class="container header-bottom__container flex">
-          <nav class="nav header-bottom__nav">
-            <ul class="nav__list flex">      
-              <li class="nav__item menu-item-has-children"><a class="nav__link" href="#">Другие услуги</a>
-                <ul class="sub-menu">
-                  <li class="nav__item"> <a class="nav__link" href="./page-laptop.html">Ремонт ноутбуков</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="./cartridge-refilling.html">Заправка картриджей</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="./printer-repair.html">Ремонт принтеров</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="./laptop-cleaning.html">Чистка ноутбуков</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="./computer-repair.html">Ремонт компьютеров</a></li>
-                  <li class="nav__item"> <a class="nav__link" href="./screen-replacement.html">Замена матрицы и ПО</a></li>
-                </ul>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="./about.html">О компании</a></li>
-              <li class="nav__item"><a class="nav__link" href="./pay-page.html">Оплата и гарантия</a></li>
-              <li class="nav__item"><a class="nav__link" href="./law-page.html">Юридические лица    </a></li>
-              <li class="nav__item"> <a class="nav__link" href="./contact.html">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
+    <header class="header"> 
+      <div class="container"> 
+        <nav class="nav header__nav">
+          <ul> 
+            <li><a href="">Услуги</a></li>
+            <li><a href="">О компании</a></li>
+            <li><a href=""> <img src="./img/logo-computex.svg" alt=""></a></li>
+            <li><a href="">Для бизнеса</a></li>
+            <li> <a href="">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main class="main">
-      <section class="hero"><img class="circle" src="img/circle.svg" alt="">
-        <div class="hero__bg" data-aos="fade-left"> <img src="img/bg-ring.svg" alt=""></div>
-        <div class="container hero__container" data-aos="fade-right"> 
-          <div class="hero__content"> 
-            <h1>сервисный центр по ремонту и обслуживанию техники</h1>
-            <p>Мы быстро и профессионально отремонтируем любое электронное устройство с гарантией. Отремонтируем, настроим, установим бытовую технику у Вас дома, на даче или на работе.</p><a class="hvr-bounce-to-right hero__btn flex" href="#all-service"><span class="btn"> 
-                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.313814 0.313814C0.694195 -0.0665668 1.28943 -0.101147 1.70887 0.210074L1.82904 0.313814L8.25761 6.74239C8.63799 7.12277 8.67257 7.718 8.36135 8.13745L8.25761 8.25761L1.82904 14.6862C1.41062 15.1046 0.732233 15.1046 0.313814 14.6862C-0.0665666 14.3058 -0.101146 13.7106 0.210074 13.2911L0.313814 13.171L5.98477 7.5L0.313814 1.82904C-0.104605 1.41062 -0.104605 0.732233 0.313814 0.313814Z" fill="white"></path>
-                </svg></span><span class="btn-text">Все услуги</span></a>
+      <section class="hero"> 
+        <div class="container hero__container"> 
+          <div class="hero__img"> 
+            <svg width="1025" height="370" viewBox="0 0 1025 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M42.1248 86.07V366.93C42.1248 371.244 42.8694 375.127 44.3587 378.579C46.0607 381.599 47.9754 383.109 50.103 383.109H111.694C112.758 383.109 113.609 383.756 114.247 385.05C114.886 386.344 115.205 387.854 115.205 389.58V446.529C115.205 448.254 114.886 449.764 114.247 451.059C113.609 452.353 112.758 453 111.694 453H34.4657C25.1047 453 17.0201 446.097 10.2121 432.291C3.40402 418.486 0 402.091 0 383.109V69.8915C0 50.9086 3.40402 34.5143 10.2121 20.7086C17.0201 6.90287 25.1047 0 34.4657 0H111.694C112.758 0 113.609 0.647148 114.247 1.94144C114.886 3.23574 115.205 4.74572 115.205 6.47142V63.42C115.205 65.1457 114.886 66.6557 114.247 67.95C113.609 69.2443 112.758 69.8915 111.694 69.8915H50.103C47.9754 69.8915 46.0607 71.6172 44.3587 75.0686C42.8694 78.0886 42.1248 81.7557 42.1248 86.07ZM121.854 383.109V69.8915C121.854 50.9086 125.258 34.5143 132.066 20.7086C138.875 6.90287 146.959 0 156.32 0H202.274C211.848 0 220.039 6.90287 226.847 20.7086C233.655 34.5143 237.059 50.9086 237.059 69.8915V383.109C237.059 402.091 233.655 418.486 226.847 432.291C220.039 446.097 211.848 453 202.274 453H156.32C146.959 453 138.875 446.097 132.066 432.291C125.258 418.486 121.854 402.091 121.854 383.109ZM163.979 86.07V366.93C163.979 371.244 164.724 375.127 166.213 378.579C167.915 381.599 169.83 383.109 171.957 383.109H186.956C189.084 383.109 190.892 381.599 192.382 378.579C193.871 375.127 194.615 371.244 194.615 366.93V86.07C194.615 83.05 194.296 80.4614 193.658 78.3043C193.02 75.7157 192.062 73.7743 190.786 72.48C189.509 70.7543 188.233 69.8915 186.956 69.8915H171.957C169.83 69.8915 167.915 71.6172 166.213 75.0686C164.724 78.0886 163.979 81.7557 163.979 86.07ZM255.337 0H306.397C308.312 0 309.376 1.94143 309.588 5.82429L320.12 144.313L330.97 5.82429C331.183 1.94143 332.246 0 334.161 0H385.221C386.073 0 386.817 0.647148 387.455 1.94144C388.094 3.23574 388.413 4.74572 388.413 6.47142V446.529C388.413 448.254 388.094 449.764 387.455 451.059C386.817 452.353 386.073 453 385.221 453H349.479C348.415 453 347.564 452.353 346.926 451.059C346.288 449.764 345.969 448.254 345.969 446.529V261.446L337.991 365.636C337.778 369.087 336.714 370.813 334.799 370.813H305.44C303.738 370.813 302.674 369.087 302.248 365.636L294.27 261.446V446.529C294.27 448.254 293.951 449.764 293.313 451.059C292.675 452.353 291.93 453 291.079 453H255.337C254.486 453 253.741 452.353 253.103 451.059C252.465 449.764 252.145 448.254 252.145 446.529V6.47142C252.145 2.15714 253.209 0 255.337 0ZM476.991 183.789V86.07C476.991 81.7557 476.246 78.0886 474.757 75.0686C473.268 71.6172 471.459 69.8915 469.332 69.8915H449.546C448.695 69.8915 447.95 70.5386 447.312 71.8329C446.674 73.1272 446.355 74.6372 446.355 76.3629V192.849C446.355 194.574 446.674 196.084 447.312 197.379C447.95 198.673 448.695 199.32 449.546 199.32H469.332C471.459 199.32 473.268 197.81 474.757 194.79C476.246 191.77 476.991 188.103 476.991 183.789ZM404.23 6.47142C404.23 2.15714 405.294 0 407.421 0H484.65C494.224 0 502.415 6.90287 509.223 20.7086C516.031 34.5143 519.435 50.9086 519.435 69.8915V199.32C519.435 218.734 516.031 235.344 509.223 249.15C502.415 262.524 494.224 269.211 484.65 269.211H449.546C448.695 269.211 447.95 269.859 447.312 271.153C446.674 272.447 446.355 273.957 446.355 275.683V446.529C446.355 448.254 446.035 449.764 445.397 451.059C444.759 452.353 444.014 453 443.163 453H407.421C406.57 453 405.825 452.353 405.187 451.059C404.549 449.764 404.23 448.254 404.23 446.529V6.47142ZM531.13 0H566.872C567.723 0 568.468 0.647148 569.106 1.94144C569.744 3.23574 570.063 4.74572 570.063 6.47142V366.93C570.063 371.244 570.808 375.127 572.297 378.579C573.999 381.599 575.914 383.109 578.041 383.109H593.04C595.168 383.109 596.976 381.599 598.465 378.579C599.955 375.127 600.699 371.244 600.699 366.93V6.47142C600.699 2.15714 601.763 0 603.891 0H639.633C640.697 0 641.548 0.647148 642.186 1.94144C642.824 3.23574 643.143 4.74572 643.143 6.47142V383.109C643.143 402.091 639.739 418.486 632.931 432.291C626.123 446.097 617.932 453 608.358 453H562.404C553.043 453 544.958 446.097 538.15 432.291C531.342 418.486 527.938 402.091 527.938 383.109V6.47142C527.938 4.74572 528.257 3.23574 528.896 1.94144C529.534 0.647148 530.279 0 531.13 0ZM651.194 0H759.697C760.761 0 761.612 0.647148 762.25 1.94144C762.888 3.23574 763.207 4.74572 763.207 6.47142V63.42C763.207 65.1457 762.888 66.6557 762.25 67.95C761.612 69.2443 760.761 69.8915 759.697 69.8915H729.699C728.848 69.8915 728.103 70.5386 727.465 71.8329C726.827 73.1272 726.508 74.6372 726.508 76.3629V446.529C726.508 448.254 726.189 449.764 725.55 451.059C724.912 452.353 724.167 453 723.316 453H687.574C686.723 453 685.979 452.353 685.34 451.059C684.702 449.764 684.383 448.254 684.383 446.529V76.3629C684.383 74.6372 684.064 73.1272 683.426 71.8329C682.787 70.5386 682.043 69.8915 681.192 69.8915H651.194C650.343 69.8915 649.598 69.2443 648.96 67.95C648.322 66.6557 648.002 65.1457 648.002 63.42V6.47142C648.002 4.74572 648.322 3.23574 648.96 1.94144C649.598 0.647148 650.343 0 651.194 0ZM771.113 0H879.616C880.68 0 881.531 0.647148 882.169 1.94144C882.808 3.23574 883.127 4.74572 883.127 6.47142V63.42C883.127 67.7343 881.957 69.8915 879.616 69.8915H813.238C812.387 69.8915 811.642 70.5386 811.004 71.8329C810.366 73.1272 810.047 74.6372 810.047 76.3629V185.083C810.047 186.809 810.366 188.319 811.004 189.613C811.642 190.907 812.387 191.554 813.238 191.554H837.172C838.023 191.554 838.768 192.201 839.406 193.496C840.045 194.79 840.364 196.3 840.364 198.026V254.974C840.364 256.7 840.045 258.21 839.406 259.504C838.768 260.799 838.023 261.446 837.172 261.446H813.238C812.387 261.446 811.642 262.093 811.004 263.387C810.366 264.681 810.047 266.191 810.047 267.917V376.637C810.047 378.363 810.366 379.873 811.004 381.167C811.642 382.461 812.387 383.109 813.238 383.109H879.616C880.68 383.109 881.531 383.756 882.169 385.05C882.808 386.344 883.127 387.854 883.127 389.58V446.529C883.127 450.843 881.957 453 879.616 453H771.113C770.262 453 769.518 452.353 768.879 451.059C768.241 449.764 767.922 448.254 767.922 446.529V6.47142C767.922 4.74572 768.241 3.23574 768.879 1.94144C769.518 0.647148 770.262 0 771.113 0ZM1024.74 9.06001L976.557 226.5L1024.74 443.94C1025.17 446.097 1025.06 448.254 1024.43 450.411C1023.79 452.137 1022.94 453 1021.87 453H982.62C981.131 453 980.173 451.706 979.748 449.117L953.26 330.69L927.092 449.117C926.454 451.706 925.496 453 924.22 453H884.967C883.903 453 883.052 452.137 882.414 450.411C881.776 448.254 881.669 446.097 882.095 443.94L930.283 226.5L882.095 9.06001C881.669 6.90287 881.776 4.96144 882.414 3.2357C883.052 1.07857 883.903 0 884.967 0H924.22C925.496 0 926.454 1.2943 927.092 3.88289L953.26 122.31L979.748 3.88289C980.173 1.2943 981.131 0 982.62 0H1021.87C1022.94 0 1023.79 1.07857 1024.43 3.2357C1025.06 4.96144 1025.17 6.90287 1024.74 9.06001Z" fill="white"></path>
+            </svg>
           </div>
-          <div class="hero__img"><img src="img/hero-services.png" alt=""></div>
+          <h1>computex</h1>
+          <p> Ваш Надежный Партнер в Мире Качественной Печати</p>
         </div>
       </section>
-      <section class="service-links" id="all-service">
-        <div class="container service-links__container"> <a class="service-links__link" href="./page-laptop.html">
-            <h3>ремонт ноутбуков</h3><img src="img/repair-book.png" alt="">
-            <div class="service-links__arrow"> 
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="30" fill="white" fill-opacity="0.2"></rect>
-                <rect x="10" y="10" width="40" height="40" rx="20" fill="white"></rect>
-                <path d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18"></path>
-              </svg>
-            </div></a><a class="service-links__link" href="./cartridge-refilling.html">
-            <h3>заправка картриджей </h3><img src="img/refilling-cartridges.png" alt="">
-            <div class="service-links__arrow"> 
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="30" fill="white" fill-opacity="0.2"></rect>
-                <rect x="10" y="10" width="40" height="40" rx="20" fill="white"></rect>
-                <path d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18"></path>
-              </svg>
-            </div></a><a class="service-links__link" href="./printer-repair.html">
-            <h3>ремонт принтеров</h3><img src="img/printers.png" alt="">
-            <div class="service-links__arrow"> 
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="30" fill="white" fill-opacity="0.2"></rect>
-                <rect x="10" y="10" width="40" height="40" rx="20" fill="white"></rect>
-                <path d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18"></path>
-              </svg>
-            </div></a><a class="service-links__link" href="./laptop-cleaning.html">
-            <h3>чистка ноутбуков</h3><img src="img/laptop.png" alt="">
-            <div class="service-links__arrow"> 
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="30" fill="white" fill-opacity="0.2"></rect>
-                <rect x="10" y="10" width="40" height="40" rx="20" fill="white"></rect>
-                <path d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18"></path>
-              </svg>
-            </div></a><a class="service-links__link" href="./computer-repair.html">
-            <h3>ремонт компьютера</h3><img src="img/computer.png" alt="">
-            <div class="service-links__arrow"> 
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="30" fill="white" fill-opacity="0.2"></rect>
-                <rect x="10" y="10" width="40" height="40" rx="20" fill="white"></rect>
-                <path d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18"></path>
-              </svg>
-            </div></a><a class="service-links__link" href="./screen-replacement.html">
-            <h3>Замена матрицы и по</h3><img src="img/po-repair.png" alt="">
-            <div class="service-links__arrow"> 
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="30" fill="white" fill-opacity="0.2"></rect>
-                <rect x="10" y="10" width="40" height="40" rx="20" fill="white"></rect>
-                <path d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18"></path>
-              </svg>
-            </div></a></div>
-      </section>
-      <div class="section-advantages" style="background-image: url(&quot;./img/checking-laptop.png&quot;); ">
-        <div class="container flex section-advantages__container"> 
-          <div class="section-advantages__block flex"> <img src="img/place-icon.svg" alt=""><span>В центре города</span></div>
-          <div class="section-advantages__block flex"> <img src="img/garant-icon-plus.svg" alt=""><span>Гарантия на все виды услуг</span></div>
-          <div class="section-advantages__block flex"><img src="img/exp-icon.svg" alt=""><span>Опыт работы с 2003 года</span></div>
-        </div>
-      </div>
-      <section class="reference">
+      <section class="all-service"> 
         <div class="container"> 
-          <h2 class="title-words" title="Вопросы">Популярные вопросы</h2>
-          <div class="accordion-wrapp">
-            <div class="accordion">
-              <div class="accordion__title"> 
-                <h3>Вопрос 1</h3>
-              </div>
-              <div class="accordion__body"> 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum fuga aliquam pariatur temporibus illum aliquid saepe sunt a sapiente quibusdam libero delectus facere tempore cupiditate reiciendis atque mollitia, sequi id!</p>
-              </div>
-            </div>
-            <div class="accordion">
-              <div class="accordion__title"> 
-                <h3>Вопрос 2</h3>
-              </div>
-              <div class="accordion__body"> 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum fuga aliquam pariatur temporibus illum aliquid saepe sunt a sapiente quibusdam libero delectus facere tempore cupiditate reiciendis atque mollitia, sequi id!</p>
-              </div>
-            </div>
-            <div class="accordion">
-              <div class="accordion__title"> 
-                <h3>Вопрос 3</h3>
-              </div>
-              <div class="accordion__body"> 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum fuga aliquam pariatur temporibus illum aliquid saepe sunt a sapiente quibusdam libero delectus facere tempore cupiditate reiciendis atque mollitia, sequi id!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-plus">
-        <div class="container flex section-plus__container"> 
-          <div class="section-plus__block section-plus__block--1"> 
-            <h2>каждая 5 заправка катриджа бесплатно</h2><span class="section-plus__bg">5</span><img class="section-plus__img" src="img/image-free.svg" alt="">
-          </div>
-          <div class="section-plus__block section-plus__block--2" style="background-image: url(&quot;./img/delivery-fon.png&quot;); ">
-            <h2>Доставим технику бесплатно </h2>
-            <p>при заказе на сумму от 300 byn</p>
-          </div>
+          <div class="all-service__block"></div>
+          <div class="all-service__block"></div>
+          <div class="all-service__block"></div>
+          <div class="all-service__block"></div>
+          <div class="all-service__block"></div>
+          <div class="all-service__block"></div>
         </div>
       </section>
       <section class="map-section">
