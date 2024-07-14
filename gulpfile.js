@@ -9,6 +9,7 @@ const pug = require("./task/pug.js");
 const scss = require("./task/scss.js");
 const js = require("./task/js.js");
 const img = require("./task/img.js");
+const fonts = require("./task/fonts.js");
 
 
 //Сервер
@@ -17,7 +18,7 @@ const server = () => {
     server: {
       baseDir: path.root,
     },
-    notify:false,
+    notify: false,
   });
 };
 
@@ -27,14 +28,15 @@ const watcher = () => {
   watch(path.scss.watch, scss).on("all", browserSync.reload);
   watch(path.js.watch, js).on("all", browserSync.reload);
   watch(path.img.watch, img).on("all", browserSync.reload);
+  watch(path.fonts.watch, fonts).on("all", browserSync.reload);
 };
 //
 const build = series(
   clear,
-  parallel(pug, scss, js,img)
+  parallel(pug, scss, js, img, fonts)
 );
 const dev = series(
-  build, 
+  build,
   parallel(watcher, server)
 );
 // Задачи
@@ -42,8 +44,9 @@ exports.pug = pug;
 exports.scss = scss;
 exports.js = js;
 exports.img = img;
+exports.fonts = fonts;
 
 //Сборка
 exports.default = app.isProd
-? build
-: dev;
+  ? build
+  : dev;
