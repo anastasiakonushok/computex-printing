@@ -1,0 +1,87 @@
+extends layout/app
+
+block page 
+    include chunk/header
+    main.main
+        section.hero
+            img(src="img/circle.svg" alt="").circle
+            .hero__bg(data-aos="fade-left") 
+                img(src="img/bg-ring.svg" alt="")
+            .container.hero__container(data-aos="fade-right") 
+                .hero__content 
+                    //- span.span-computex [ computex ]
+                    h1 сервисный центр по ремонту и обслуживанию техники
+                    p Мы быстро и профессионально отремонтируем любое электронное устройство с гарантией. Отремонтируем, настроим, установим бытовую технику у Вас дома, на даче или на работе.
+                    a(href='#all-service').hvr-bounce-to-right.hero__btn.flex
+                        span.btn 
+                            svg(width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M0.313814 0.313814C0.694195 -0.0665668 1.28943 -0.101147 1.70887 0.210074L1.82904 0.313814L8.25761 6.74239C8.63799 7.12277 8.67257 7.718 8.36135 8.13745L8.25761 8.25761L1.82904 14.6862C1.41062 15.1046 0.732233 15.1046 0.313814 14.6862C-0.0665666 14.3058 -0.101146 13.7106 0.210074 13.2911L0.313814 13.171L5.98477 7.5L0.313814 1.82904C-0.104605 1.41062 -0.104605 0.732233 0.313814 0.313814Z" fill="white")
+                        span.btn-text Все услуги
+                .hero__img
+                    img(src="img/hero-services.png" alt="") 
+        section.service-links(id="all-service")
+            .container.service-links__container 
+                a(href="./page-laptop.html").service-links__link
+                    h3 ремонт ноутбуков
+                    img(src="img/repair-book.png" alt="")
+                    .service-links__arrow 
+                        svg(width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            rect(width="60" height="60" rx="30" fill="white" fill-opacity="0.2")
+                            rect(x="10" y="10" width="40" height="40" rx="20" fill="white")
+                            path(d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18")
+                a(href="./cartridge-refilling.html").service-links__link
+                    h3 заправка картриджей 
+                    img(src="img/refilling-cartridges.png" alt="")
+                    .service-links__arrow 
+                        svg(width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            rect(width="60" height="60" rx="30" fill="white" fill-opacity="0.2")
+                            rect(x="10" y="10" width="40" height="40" rx="20" fill="white")
+                            path(d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18")
+                a(href="./printer-repair.html").service-links__link
+                    h3 ремонт принтеров
+                    img(src="img/printers.png" alt="")
+                    .service-links__arrow 
+                        svg(width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            rect(width="60" height="60" rx="30" fill="white" fill-opacity="0.2")
+                            rect(x="10" y="10" width="40" height="40" rx="20" fill="white")
+                            path(d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18")
+                a(href="./laptop-cleaning.html").service-links__link
+                    h3 чистка ноутбуков
+                    img(src="img/laptop.png" alt="")
+                    .service-links__arrow 
+                        svg(width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            rect(width="60" height="60" rx="30" fill="white" fill-opacity="0.2")
+                            rect(x="10" y="10" width="40" height="40" rx="20" fill="white")
+                            path(d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18")
+                a(href="./computer-repair.html").service-links__link
+                    h3 ремонт компьютера
+                    img(src="img/computer.png" alt="")
+                    .service-links__arrow 
+                        svg(width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            rect(width="60" height="60" rx="30" fill="white" fill-opacity="0.2")
+                            rect(x="10" y="10" width="40" height="40" rx="20" fill="white")
+                            path(d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18")
+                a(href="./screen-replacement.html").service-links__link
+                    h3 Замена матрицы и по
+                    img(src="img/po-repair.png" alt="")
+                    .service-links__arrow 
+                        svg(width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            rect(width="60" height="60" rx="30" fill="white" fill-opacity="0.2")
+                            rect(x="10" y="10" width="40" height="40" rx="20" fill="white")
+                            path(d="M26.3138 23.3138C26.6942 22.9334 27.2894 22.8989 27.7089 23.2101L27.829 23.3138L34.2576 29.7424C34.638 30.1228 34.6726 30.718 34.3614 31.1374L34.2576 31.2576L27.829 37.6862C27.4106 38.1046 26.7322 38.1046 26.3138 37.6862C25.9334 37.3058 25.8989 36.7106 26.2101 36.2911L26.3138 36.171L31.9848 30.5L26.3138 24.829C25.8954 24.4106 25.8954 23.7322 26.3138 23.3138Z" fill="#FA5B18")
+        .section-advantages(style='background-image: url("./img/checking-laptop.png"); ')
+            .container.flex.section-advantages__container 
+                .section-advantages__block.flex 
+                    img(src="img/place-icon.svg" alt="") 
+                    span В центре города
+                .section-advantages__block.flex 
+                    img(src="img/garant-icon-plus.svg" alt="") 
+                    span Гарантия на все виды услуг
+                .section-advantages__block.flex
+                    img(src="img/exp-icon.svg" alt="") 
+                    span Опыт работы с 2003 года
+        include chunk/reference
+        include chunk/section-plus
+        include chunk/map
+    include chunk/footer
+
