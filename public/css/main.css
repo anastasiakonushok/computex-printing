@@ -160,14 +160,15 @@ table {
   --bg-footer: #454545;
   --body-font: "Open Sans", sans-serif;
   --big-font: Humane Bold,sans-serif;
+  --title-font: Bartina,sans-serif;
   --h1-special: 2.8em;
-  --h1-font: 2em;
-  --h2-font: 1.7em;
+  --h1-font: 2.2em;
+  --h2-font: 2em;
   --h3-font: 1.25em;
   --regular-font: 1em;
   --second-font: 1.5em;
   --font-128: 5em;
-  --big-text: 28em;
+  --big-text: 30em;
 }
 
 * {
@@ -1017,11 +1018,48 @@ p {
 .all-service__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 300px);
 }
 
 .all-service__link {
+  position: relative;
+  overflow: hidden;
+}
+
+.all-service__img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.all-service__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.all-service__info {
   padding: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.all-service__info h2 {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.all-service__info .title-black {
+  color: var(--dark-color);
+}
+
+.all-service__info .title-white {
+  color: var(--white-color);
 }
 
 .service-price {

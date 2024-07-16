@@ -2,9 +2,39 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
+        grid-template-rows: repeat(2,300px);
     }
     &__link {
+        position: relative;
+        overflow: hidden;
+    }
+    &__img {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        img {
+            display: block;
+           width: 100%;
+           height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
         padding: 40px;
+        width: 100%;
+        height: 100%;
+        h2 {
+            font-family: var(--title-font);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .title-black {
+            color:var(--dark-color);
+        }
+        .title-white {
+            color:var(--white-color);
+        }
     }
 }
