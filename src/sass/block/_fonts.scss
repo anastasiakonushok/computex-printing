@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Bartina',sans-serif;
-    src: url('./fonts/bartina/Bartina-Bold.woff2') format('woff2'),
-        url('./fonts/bartina/Bartina-Bold.woff') format('woff'),
-        url('./fonts/bartina/Bartina-Bold.ttf') format('truetype');
+    src: url('../fonts/bartina/Bartina-Bold.woff2') format('woff2'),
+        url('../fonts/bartina/Bartina-Bold.woff') format('woff'),
+        url('../fonts/bartina/Bartina-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -10,9 +10,9 @@
 
 @font-face {
     font-family: 'Bartina',sans-serif;
-    src: url('./fonts/bartina/Bartina.woff2') format('woff2'),
-        url('./fonts/bartina/Bartina.woff') format('woff'),
-        url('./fonts/bartina/Bartina.ttf') format('truetype');
+    src: url('../fonts/bartina/Bartina.woff2') format('woff2'),
+        url('../fonts/bartina/Bartina.woff') format('woff'),
+        url('../fonts/bartina/Bartina.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
