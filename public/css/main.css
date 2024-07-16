@@ -680,7 +680,7 @@ p {
 }
 
 @font-face {
-  font-family: "Bartina", sans-serif;
+  font-family: "Bartina";
   src: url("../fonts/bartina/Bartina-Bold.woff2") format("woff2"), url("../fonts/bartina/Bartina-Bold.woff") format("woff"), url("../fonts/bartina/Bartina-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -688,7 +688,7 @@ p {
 }
 
 @font-face {
-  font-family: "Bartina", sans-serif;
+  font-family: "Bartina";
   src: url("../fonts/bartina/Bartina.woff2") format("woff2"), url("../fonts/bartina/Bartina.woff") format("woff"), url("../fonts/bartina/Bartina.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -696,7 +696,7 @@ p {
 }
 
 @font-face {
-  font-family: "Bartina", sans-serif;
+  font-family: "Bartina";
   src: url("../fonts/bartina/Bartina-Light.woff2") format("woff2"), url("../fonts/bartina/Bartina-Light.woff") format("woff"), url("../fonts/bartina/Bartina-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -704,7 +704,7 @@ p {
 }
 
 @font-face {
-  font-family: "Bartina", sans-serif;
+  font-family: "Bartina";
   src: url("../fonts/bartina/Bartina-Semibold.woff2") format("woff2"), url("../fonts/bartina/Bartina-Semibold.woff") format("woff"), url("../fonts/bartina/Bartina-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -884,6 +884,10 @@ p {
   font: 800 var(--big-text)/0.8 var(--big-font);
   color: var(--main-white);
   text-transform: uppercase;
+}
+
+.super-text span {
+  display: inline-block;
 }
 
 .map-section {
