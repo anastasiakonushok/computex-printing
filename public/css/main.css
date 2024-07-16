@@ -153,10 +153,13 @@ table {
   --bg-color: #F6F6F8;
   --main-pur: #5546FF;
   --main-orange: #FF4C00;
+  --main-green: #BFFF0A;
+  --main-pink: #FF7BCA;
   --main-gray: #ECEDEF;
   --main-white: #ffffff;
   --bg-footer: #454545;
   --body-font: "Open Sans", sans-serif;
+  --big-font: Humane Bold,sans-serif;
   --h1-special: 2.8em;
   --h1-font: 2em;
   --h2-font: 1.7em;
@@ -164,6 +167,7 @@ table {
   --regular-font: 1em;
   --second-font: 1.5em;
   --font-128: 5em;
+  --big-text: 28em;
 }
 
 * {
@@ -668,6 +672,46 @@ p {
   color: var(--main-yellow);
 }
 
+@font-face {
+  font-family: "Bartina", sans-serif;
+  src: url("./fonts/bartina/Bartina-Bold.woff2") format("woff2"), url("./fonts/bartina/Bartina-Bold.woff") format("woff"), url("./fonts/bartina/Bartina-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bartina", sans-serif;
+  src: url("./fonts/bartina/Bartina.woff2") format("woff2"), url("./fonts/bartina/Bartina.woff") format("woff"), url("./fonts/bartina/Bartina.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bartina", sans-serif;
+  src: url("../fonts/bartina/Bartina-Light.woff2") format("woff2"), url("../fonts/bartina/Bartina-Light.woff") format("woff"), url("../fonts/bartina/Bartina-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bartina", sans-serif;
+  src: url("../fonts/bartina/Bartina-Semibold.woff2") format("woff2"), url("../fonts/bartina/Bartina-Semibold.woff") format("woff"), url("../fonts/bartina/Bartina-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Humane Bold";
+  src: url("../fonts/humane/Humane-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .footer {
   padding-top: 60px;
   padding-bottom: 30px;
@@ -790,7 +834,7 @@ p {
   position: relative;
   overflow: hidden;
   z-index: 10;
-  height: calc(100vh - 97px);
+  height: calc(100svh - 97px);
   background: var(--main-pur);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -801,7 +845,12 @@ p {
 }
 
 .hero h1 {
-  display: none;
+  color: var(--main-white);
+  text-transform: uppercase;
+  font-size: var(--second-font);
+  font-weight: 500;
+  width: 50%;
+  text-align: center;
 }
 
 .hero__container {
@@ -815,25 +864,19 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 60px;
+  position: relative;
 }
 
-.hero__img {
-  width: 85%;
+.hero__link {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
 }
 
-.hero__img svg {
-  width: 100%;
-  height: 100%;
-}
-
-.hero p {
+.super-text {
+  font: 800 var(--big-text)/0.8 var(--big-font);
   color: var(--main-white);
   text-transform: uppercase;
-  font-size: var(--second-font);
-  font-weight: 500;
-  width: 50%;
-  text-align: center;
 }
 
 .map-section {
@@ -971,54 +1014,14 @@ p {
   margin-top: 20px;
 }
 
-.service-links {
-  padding: 90px 0px;
-}
-
-.service-links__container {
+.all-service__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 30px;
 }
 
-.service-links__link {
-  background: var(--white-color);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  padding: 30px;
-  position: relative;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
-  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
-}
-
-.service-links__link img {
-  display: block;
-  -o-object-fit: contain;
-  object-fit: contain;
-  width: 100%;
-  height: 180px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.service-links__link h3 {
-  color: var(--main-orange);
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.service-links__arrow {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  display: none;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+.all-service__link {
+  padding: 40px;
 }
 
 .service-price {
@@ -1175,36 +1178,6 @@ p {
     transition: all 0.3s ease;
   }
 
-  .service-links__link:hover {
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background: var(--main-orange);
-    -webkit-transition: all 0.6s ease;
-    -o-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-  }
-
-  .service-links__link:hover h3 {
-    color: var(--white-color);
-  }
-
-  .service-links__link:hover img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .service-links__link:hover .service-links__arrow {
-    display: block;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
   .section-all-link__link:hover {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -1249,6 +1222,7 @@ p {
 @media only screen and (max-width: 1247px) {
   :root {
     --h1-special: 2.5em;
+    --big-text: 20em;
   }
 
 @supports (-webkit-appearance:none) {
@@ -1264,6 +1238,7 @@ p {
     --h3-font: 1.1em;
     --font-128: 3em;
     --second-font: 1em;
+    --big-text: 15em;
   }
 
   .styled-table {
@@ -1346,11 +1321,6 @@ p {
     gap: 30px;
   }
 
-  .service-links__container {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-  }
-
   .service-info__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1398,6 +1368,17 @@ p {
     --h3-font: 1em;
     --font-128: 2em;
     --second-font: 1em;
+    --big-text: 13em;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media only screen and (max-height: 767px) {
+  :root {
+    --big-text: 26em;
   }
 
 @supports (-webkit-appearance:none) {

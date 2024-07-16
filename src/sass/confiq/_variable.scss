@@ -9,12 +9,15 @@
     --bg-color: #F6F6F8;
     --main-pur:#5546FF;
     --main-orange: #FF4C00;
+    --main-green:#BFFF0A;
+    --main-pink:#FF7BCA;
     --main-gray: #ECEDEF;
     --main-white: #ffffff;
     --bg-footer:#454545;
     
     //font
     --body-font: "Open Sans", sans-serif;
+    --big-font: Humane Bold,sans-serif;
 
     //font-size
     --h1-special: 2.8em;
@@ -24,9 +27,11 @@
     --regular-font: 1em;
     --second-font: 1.5em;
     --font-128:5em;
+    --big-text:28em;
 
     @include mq(desktop, max) {
         --h1-special: 2.5em;
+        --big-text:20em;
     }
     @include mq(tablet-wide, max) {
         --h1-special: 2em;
@@ -35,6 +40,7 @@
         --h3-font: 1.1em;
         --font-128:3em;
         --second-font: 1em;
+        --big-text:15em;
     }
     @include mq(phablet, max) {
         --h1-special: 2em;
@@ -43,5 +49,12 @@
         --h3-font: 1em;
         --font-128:2em;
         --second-font: 1em;
+        --big-text:13em;
     }
+
+    @include mq-height("tablet", max) {
+        // Your styles here
+        --big-text:26em;
+    }
+    
 }

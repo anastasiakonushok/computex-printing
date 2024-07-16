@@ -22,6 +22,36 @@ $breakpoints: ("phone": 400px,
     }
 }
 
+
+//
+
+$height-breakpoints: (
+    "phone": 400px,
+    "phone-wide": 480px,
+    "phablet": 560px,
+    "tablet-small": 640px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1248px,
+    "desktop-wide": 1440px
+);
+
+@mixin mq-height($height, $type: min) {
+    @if map_has_key($height-breakpoints, $height) {
+        $height: map_get($height-breakpoints, $height);
+
+        @if $type == max {
+            $height: $height - 1px;
+        }
+
+        @media only screen and (#{$type}-height: $height) {
+            @content;
+        }
+    }
+}
+
+
+
 //position
 @mixin position($position: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: initial) {
     position: $position;
