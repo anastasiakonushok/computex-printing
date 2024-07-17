@@ -8,6 +8,15 @@
         position: relative;
         overflow: hidden;
     }
+    &__link--1 {
+        background:var(--main-pink);
+    }
+    &__link--5 {
+        background:var(--main-green);
+    }
+    &__link--6 {
+        background:var(--main-white);
+    }
     &__img {
         display: block;
         position: absolute;
@@ -36,5 +45,24 @@
         .title-white {
             color:var(--white-color);
         }
+    }
+    &__bg {
+        display: block;
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+        right: -10%;
+        bottom:-20%;
+        z-index: 0;
+    }
+    &__bg--5 {
+        height: 80%;
+        right: 0;
+        bottom:-10px;
+    }
+    &__bg--6 {
+        height: 80%;
+        right: -15%;
+        bottom:-15px;
     }
 }
