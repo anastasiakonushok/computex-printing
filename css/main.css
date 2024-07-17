@@ -1036,6 +1036,18 @@ p {
   overflow: hidden;
 }
 
+.all-service__link--1 {
+  background: var(--main-pink);
+}
+
+.all-service__link--5 {
+  background: var(--main-green);
+}
+
+.all-service__link--6 {
+  background: var(--main-white);
+}
+
 .all-service__img {
   display: block;
   position: absolute;
@@ -1070,6 +1082,29 @@ p {
 
 .all-service__info .title-white {
   color: var(--white-color);
+}
+
+.all-service__bg {
+  display: block;
+  position: absolute;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  right: -10%;
+  bottom: -20%;
+  z-index: 0;
+}
+
+.all-service__bg--5 {
+  height: 80%;
+  right: 0;
+  bottom: -10px;
+}
+
+.all-service__bg--6 {
+  height: 80%;
+  right: -15%;
+  bottom: -15px;
 }
 
 .service-price {
