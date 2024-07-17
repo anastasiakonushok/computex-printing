@@ -1,42 +1,42 @@
-@font-face {
-    font-family: 'Bartina';
-    src: url('../fonts/bartina/Bartina-Bold.woff2') format('woff2'),
-        url('../fonts/bartina/Bartina-Bold.woff') format('woff'),
-        url('../fonts/bartina/Bartina-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Bartina';
+//     src: url('../fonts/bartina/Bartina-Bold.woff2') format('woff2'),
+//         url('../fonts/bartina/Bartina-Bold.woff') format('woff'),
+//         url('../fonts/bartina/Bartina-Bold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Bartina';
-    src: url('../fonts/bartina/Bartina.woff2') format('woff2'),
-        url('../fonts/bartina/Bartina.woff') format('woff'),
-        url('../fonts/bartina/Bartina.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Bartina';
+//     src: url('../fonts/bartina/Bartina.woff2') format('woff2'),
+//         url('../fonts/bartina/Bartina.woff') format('woff'),
+//         url('../fonts/bartina/Bartina.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Bartina';
-    src: url('../fonts/bartina/Bartina-Light.woff2') format('woff2'),
-        url('../fonts/bartina/Bartina-Light.woff') format('woff'),
-        url('../fonts/bartina/Bartina-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Bartina';
+//     src: url('../fonts/bartina/Bartina-Light.woff2') format('woff2'),
+//         url('../fonts/bartina/Bartina-Light.woff') format('woff'),
+//         url('../fonts/bartina/Bartina-Light.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
-@font-face {
-    font-family: 'Bartina';
-    src: url('../fonts/bartina/Bartina-Semibold.woff2') format('woff2'),
-        url('../fonts/bartina/Bartina-Semibold.woff') format('woff'),
-        url('../fonts/bartina/Bartina-Semibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Bartina';
+//     src: url('../fonts/bartina/Bartina-Semibold.woff2') format('woff2'),
+//         url('../fonts/bartina/Bartina-Semibold.woff') format('woff'),
+//         url('../fonts/bartina/Bartina-Semibold.ttf') format('truetype');
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
 //Humane
 
@@ -48,12 +48,18 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/muller/MullerMedium.woff2') format('woff2');
+    font-weight: 600;
+    
+    font-display: swap;
+}
 
-// @font-face {
-//     font-family: 'Humane',sans-serif;
-//     src: url('./fonts/humane/Humane-Regular.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-//     font-display: swap;
-// }
-
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/muller/MullerExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}

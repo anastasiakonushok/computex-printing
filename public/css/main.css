@@ -149,7 +149,7 @@ table {
 
 :root {
   --white-color: #FFFFFF;
-  --dark-color: #2c2828;
+  --dark-color: #1c1c1c;
   --bg-color: #F6F6F8;
   --main-pur: #5546FF;
   --main-orange: #FF4C00;
@@ -163,7 +163,7 @@ table {
   --title-font: Bartina;
   --h1-special: 2.8em;
   --h1-font: 2.2em;
-  --h2-font: 2em;
+  --h2-font: 1.6em;
   --h3-font: 1.25em;
   --regular-font: 1em;
   --second-font: 1.5em;
@@ -172,9 +172,21 @@ table {
 }
 
 .section-about {
-  background: var(--main-pink);
+  background: var(--main-green);
   padding: 100px 0px;
   text-align: center;
+  border-top: 1px solid black;
+}
+
+.section-about h2 {
+  font: bold 46px "Muller";
+  text-transform: uppercase;
+}
+
+.section-about p {
+  font-family: "Muller";
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 * {
@@ -243,6 +255,7 @@ h2 {
   font-size: var(--h2-font);
   line-height: 110%;
   font-weight: 700;
+  line-height: 110%;
 }
 
 h3 {
@@ -680,41 +693,24 @@ p {
 }
 
 @font-face {
-  font-family: "Bartina";
-  src: url("../fonts/bartina/Bartina-Bold.woff2") format("woff2"), url("../fonts/bartina/Bartina-Bold.woff") format("woff"), url("../fonts/bartina/Bartina-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Bartina";
-  src: url("../fonts/bartina/Bartina.woff2") format("woff2"), url("../fonts/bartina/Bartina.woff") format("woff"), url("../fonts/bartina/Bartina.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Bartina";
-  src: url("../fonts/bartina/Bartina-Light.woff2") format("woff2"), url("../fonts/bartina/Bartina-Light.woff") format("woff"), url("../fonts/bartina/Bartina-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Bartina";
-  src: url("../fonts/bartina/Bartina-Semibold.woff2") format("woff2"), url("../fonts/bartina/Bartina-Semibold.woff") format("woff"), url("../fonts/bartina/Bartina-Semibold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Humane Bold";
   src: url("../fonts/humane/Humane-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/muller/MullerMedium.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/muller/MullerExtraBold.otf") format("opentype");
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -960,11 +956,13 @@ p {
 
 .reference {
   padding: 90px 0px;
-  background: var(--main-white);
+  background: var(--main-pink);
 }
 
 .reference h2 {
-  margin-bottom: 30px;
+  font: 700 46px "Muller";
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .accordion__body {
@@ -978,6 +976,8 @@ p {
 .accordion__title {
   cursor: pointer;
   position: relative;
+  text-transform: uppercase;
+  font-size: 24px;
 }
 
 .accordion .show-accordion::after {
@@ -1000,13 +1000,6 @@ p {
   top: 40%;
   width: 20px;
   height: 20px;
-}
-
-.accordion h3 {
-  font-size: var(--h3-font);
-  line-height: 110%;
-  font-weight: 700;
-  color: var(--dark-color);
 }
 
 .accordion:not(:last-child) {
@@ -1071,9 +1064,9 @@ p {
 }
 
 .all-service__info h2 {
-  font-family: var(--title-font);
+  font-family: "Muller";
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .all-service__info .title-black {
@@ -1102,8 +1095,8 @@ p {
 }
 
 .all-service__bg--6 {
-  height: 80%;
-  right: -15%;
+  height: 85%;
+  right: -18%;
   bottom: -15px;
 }
 
