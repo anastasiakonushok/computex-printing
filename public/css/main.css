@@ -150,14 +150,14 @@ table {
 :root {
   --white-color: #FFFFFF;
   --dark-color: #1c1c1c;
-  --bg-color: #F6F6F8;
+  --bg-color: #020202;
   --main-pur: #5546FF;
   --main-orange: #FF4C00;
   --main-green: #BFFF0A;
   --main-pink: #FF7BCA;
   --main-gray: #ECEDEF;
   --main-white: #ffffff;
-  --bg-footer: #454545;
+  --bg-footer: #1c1c1c;
   --body-font: "Open Sans", sans-serif;
   --big-font: Humane Bold;
   --title-font: Bartina;
@@ -175,7 +175,6 @@ table {
   background: var(--main-green);
   padding: 100px 0px;
   text-align: center;
-  border-top: 1px solid black;
 }
 
 .section-about h2 {
@@ -955,7 +954,7 @@ p {
 }
 
 .reference {
-  padding: 90px 0px;
+  padding: 100px 0px;
   background: var(--main-pink);
 }
 
@@ -963,6 +962,7 @@ p {
   font: 700 46px "Muller";
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .accordion__body {
