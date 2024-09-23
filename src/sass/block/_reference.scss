@@ -18,6 +18,9 @@
         position:absolute;
         width: 150px;
         height: 150px;
+        top: 40%;
+        animation: rotate 20s linear infinite;
+        overflow: hidden;
     }
 }
 .accordion-wrapp {
@@ -85,4 +88,10 @@
     }
 }
 
+@keyframes rotate {
+    to {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
 

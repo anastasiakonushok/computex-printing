@@ -724,7 +724,7 @@ p {
 
 @font-face {
   font-family: "Travels";
-  src: url("../../fonts/travels/Travels-Medium.ttf") format("truetype");
+  src: url("../fonts/travels/Travels-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -732,7 +732,7 @@ p {
 
 @font-face {
   font-family: "Travels";
-  src: url("../../fonts/travels/Travels-Bold.ttf") format("truetype");
+  src: url("../fonts/travels/Travels-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -740,7 +740,7 @@ p {
 
 @font-face {
   font-family: "Travels";
-  src: url("../../fonts/travels/Travels-Black.ttf") format("truetype");
+  src: url("../fonts/travels/Travels-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -1003,6 +1003,10 @@ p {
   position: absolute;
   width: 150px;
   height: 150px;
+  top: 40%;
+  -webkit-animation: rotate 20s linear infinite;
+  animation: rotate 20s linear infinite;
+  overflow: hidden;
 }
 
 .accordion-wrapp {
@@ -1073,6 +1077,20 @@ p {
 
 .accordion:last-child .accordion__body {
   margin-top: 20px;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
 }
 
 .all-service__container {
