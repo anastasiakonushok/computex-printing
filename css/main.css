@@ -802,89 +802,6 @@ p {
   font-display: swap;
 }
 
-.footer {
-  padding-top: 60px;
-  padding-bottom: 30px;
-  color: var(--main-white);
-  background: var(--bg-footer);
-}
-
-.footer h3 {
-  font-weight: 500;
-  margin-bottom: 30px;
-  color: var(--main-orange);
-}
-
-.footer__contact ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer__contact svg {
-  width: 20px;
-}
-
-.footer__phone {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 15px;
-  color: var(--dark-color);
-}
-
-.footer__phone .text {
-  font: 18px/110% var(--title-font);
-}
-
-.footer__time,
-.footer__local {
-  gap: 15px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: var(--dark-color);
-}
-
-.footer__wrapp {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.footer .nav-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer .nav-footer a {
-  font-size: var(--regular-font);
-  line-height: 140%;
-  font-weight: 400;
-  color: var(--main-white);
-}
-
-.footer__copyright {
-  padding-top: 60px;
-  text-align: center;
-}
-
-.footer__copyright p {
-  font-size: 14px;
-}
-
 .button-up {
   display: block;
   float: right;
@@ -1239,6 +1156,8 @@ p {
 
 .section-works {
   padding: 100px 0px;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-works h2 {
@@ -1266,6 +1185,24 @@ p {
 
 .section-works__block {
   border-radius: 10px;
+}
+
+.section-works__img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  bottom: 25%;
+  right: 10%;
+  -webkit-animation: rotate 20s linear infinite;
+  animation: rotate 20s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
 }
 
 @supports (-webkit-appearance:none) {
