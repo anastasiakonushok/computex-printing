@@ -171,7 +171,10 @@ table {
 }
 
 .section-about {
-  background: var(--main-green);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#bfff0a));
+  background: -o-linear-gradient(top, #ffffff, #bfff0a);
+  background: linear-gradient(to bottom, #ffffff, #bfff0a);
+  background-repeat: repeat;
   padding: 100px 0px 150px 0px;
 }
 
@@ -182,13 +185,12 @@ table {
 }
 
 .section-about p {
-  font-family: "Travel";
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .section-about__info {
-  width: 75%;
+  width: 80%;
   margin-left: auto;
 }
 
@@ -197,10 +199,24 @@ table {
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 
+.section-about ul li:last-child {
+  padding-top: 40px;
+}
+
 .section-about h3 {
   font-size: 24px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section-about .number {
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(47, 47, 47);
+  margin-bottom: 30px;
+  display: inline-block;
 }
 
 * {
@@ -631,6 +647,46 @@ p {
   cursor: pointer;
 }
 
+.main-button-dark {
+  color: #000000;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 70px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.7rem 1rem 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  -o-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.main-button-white {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 70px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.7rem 1rem 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  -o-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
+}
+
 .section-contact__block {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -917,63 +973,11 @@ p {
   display: inline-block;
 }
 
-.map-section {
-  position: relative;
-}
-
-.map-section__wrapp {
-  padding: 60px 0px;
-  background: var(--main-pur);
-  width: 100%;
-}
-
-.map-section__info {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.map-section__container {
-  position: relative;
-}
-
-.map-section__row {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
-  color: var(--main-gray);
-  opacity: 0.9;
-}
-
-.map-section__row .text {
-  font-size: var(--regular-font);
-  line-height: 140%;
-  font-weight: 400;
-  font-weight: 600;
-  color: var(--main-white);
-}
-
-.map-section__row .icon {
-  color: var(--main-white);
-}
-
-.map-section__card h3 {
-  margin-bottom: 30px;
-  color: var(--main-white);
-}
-
-.map-section__social {
-  color: var(--main-white);
-  opacity: 0.9;
-}
-
-.map-section__phons {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 15px;
+.map-section h2 {
+  font: 700 52px/109% "Travels";
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 #map {
@@ -996,7 +1000,7 @@ p {
 .reference h2 {
   font: 700 52px/109% "Travels";
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .reference__img {
@@ -1244,6 +1248,26 @@ p {
   color: white;
 }
 
+.section-works__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.section-works__grid img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.section-works__block {
+  border-radius: 10px;
+}
+
 @supports (-webkit-appearance:none) {
   .accordion__title:after {
     background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 33.75L33.75 11.25' stroke='%230C0D0A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M15.4688 11.25H33.7499V29.5312' stroke='%230C0D0A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
@@ -1335,6 +1359,19 @@ p {
     transition: all 0.3s ease;
     opacity: 1;
     transition: all 0.3s ease;
+  }
+
+  .accordion__title:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .accordion__title:hover h3 {
+    padding-left: 20px;
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
   }
 
   .section-all-link__link:hover {
