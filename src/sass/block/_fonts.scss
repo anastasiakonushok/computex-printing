@@ -1,64 +1,42 @@
-// @font-face {
-//     font-family: 'Bartina';
-//     src: url('../fonts/bartina/Bartina-Bold.woff2') format('woff2'),
-//         url('../fonts/bartina/Bartina-Bold.woff') format('woff'),
-//         url('../fonts/bartina/Bartina-Bold.ttf') format('truetype');
-//     font-weight: bold;
-//     font-style: normal;
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'Bartina';
-//     src: url('../fonts/bartina/Bartina.woff2') format('woff2'),
-//         url('../fonts/bartina/Bartina.woff') format('woff'),
-//         url('../fonts/bartina/Bartina.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'Bartina';
-//     src: url('../fonts/bartina/Bartina-Light.woff2') format('woff2'),
-//         url('../fonts/bartina/Bartina-Light.woff') format('woff'),
-//         url('../fonts/bartina/Bartina-Light.ttf') format('truetype');
-//     font-weight: 300;
-//     font-style: normal;
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'Bartina';
-//     src: url('../fonts/bartina/Bartina-Semibold.woff2') format('woff2'),
-//         url('../fonts/bartina/Bartina-Semibold.woff') format('woff'),
-//         url('../fonts/bartina/Bartina-Semibold.ttf') format('truetype');
-//     font-weight: 600;
-//     font-style: normal;
-//     font-display: swap;
-// }
 
 //Humane
 
 
 @font-face {
     font-family: 'Humane Bold';
-    src: url('../fonts/humane/Humane-Bold.ttf') format('truetype');
+    src: url('../../fonts/humane/Humane-Bold.ttf') format('truetype'),
+        url('../../fonts/humane/Humane-Bold.woff') format('woff'),
+        url('../../fonts/humane/Humane-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Travels';
+    src: url('../../fonts/travels/Travels-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Travels';
+    src: url('../../fonts/travels/Travels-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Travels';
+    src: url('../../fonts/travels/Travels-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Muller';
-    src: url('../fonts/muller/MullerMedium.woff2') format('woff2');
-    font-weight: 600;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Muller';
-    src: url('../fonts/muller/MullerExtraBold.otf') format('opentype');
-    font-weight: 800;
+    font-family: 'Travels';
+    src: url('../../fonts/travels/Travels-Black.ttf') format('truetype');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }

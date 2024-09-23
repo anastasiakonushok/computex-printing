@@ -5,15 +5,7 @@ block page
     main.main
         section.hero 
             .container.hero__container 
-                .hero__title.super-text 
-                    span.super-text__span c
-                    span.super-text__span o
-                    span.super-text__span m
-                    span.super-text__span p
-                    span.super-text__span u
-                    span.super-text__span t
-                    span.super-text__span e
-                    span.super-text__span x
+                .hero__title.super-text computex
                 h1  Ваш Надежный Партнер в Мире Качественной Печати
             a(href="").hero__link
                 svg(width="31" height="40" viewBox="0 0 31 59" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -47,14 +39,24 @@ block page
                     .all-service__img 
                         img(src="./img/print-img-4.jpg", alt="")
                     .all-service__info
-                        h2.title-white наружная реклама
-                
+                        h2.title-white наружная реклама             
         section.section-about 
             .container.section-about__container 
-                h2 О нас
-                p.section-about__text.section-about__text--1 Рекламное агентство в Гомеле «Компьютекс» предоставляет весь ассортимент услуг в областиполиграфии,наружной рекламы,изготовления стендов в Гомеле, реализовывает любые идеи на продукции сувенирного характера. Благодаря многолетнему опыту специалисты нашей компании подскажут Вам самые выгодные варианты подачи рекламы.
-                p.section-about__text.section-about__text--2 Опытные дизайнеры помогут Вам разработать индивидуальный фирменный стиль посредством разработки макетов для наружной рекламы, полиграфической продукции и бизнес-сувениров, что играет значимую роль в повседневной жизни.
+                h2 Наши
+                    br
+                    | Преимущества
+                .section-about__info 
+                    ul 
+                        li 
+                            h3 Современное оборудование: регулярная модернизация техники и работа на новейших принтерах и плоттерах.
+                        li 
+                            h3 Современное оборудование
+                        li 
+                            h3 Современное оборудование
+                        li 
+                            h3 Современное оборудование
         include chunk/reference
+        include chunk/works
         include chunk/map
     include chunk/footer
 
