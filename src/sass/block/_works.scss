@@ -1,5 +1,7 @@
 .section-works {
     padding: 100px 0px;
+    position: relative;
+    overflow: hidden;
     h2 {
         font-family: 'Travels';
         font-size: 52px;
@@ -26,4 +28,19 @@
     &__block {
         border-radius:10px;
     }
+    &__img {
+        position:absolute;
+        width: 150px;
+        height: 150px;
+        bottom: 25%;
+        right: 10%;
+        animation: rotate 20s linear infinite;
+        overflow: hidden;
+    }
 }
+@keyframes rotate {
+    to {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
