@@ -158,8 +158,7 @@ table {
   --main-gray: #ECEDEF;
   --main-white: #ffffff;
   --bg-footer: #1c1c1c;
-  --big-font: "Humane Bold", Arial, serif;
-  --title-font: Bartina;
+  --big-font: "Humane Bold";
   --h1-special: 2.8em;
   --h1-font: 2.2em;
   --h2-font: 1.5em;
@@ -1044,6 +1043,9 @@ p {
   width: 100%;
   height: 100%;
   z-index: -1;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .all-service__img img {
@@ -1052,6 +1054,9 @@ p {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .all-service__info {
@@ -1083,6 +1088,9 @@ p {
   right: -10%;
   bottom: -20%;
   z-index: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .all-service__bg--5 {
@@ -1282,22 +1290,6 @@ p {
     transition: all 0.3s ease;
   }
 
-  .map-section__row:hover {
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    opacity: 1;
-    transition: all 0.3s ease;
-  }
-
-  .map-section__social:hover {
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    opacity: 1;
-    transition: all 0.3s ease;
-  }
-
   .accordion__title:hover {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -1309,6 +1301,21 @@ p {
     -webkit-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
+  }
+
+  .all-service__link:hover {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .all-service__link:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .section-all-link__link:hover {
@@ -1444,14 +1451,6 @@ p {
   .footer .nav-footer,
   .footer .contact-2 {
     width: 45%;
-  }
-
-  .map-section__info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 30px;
   }
 
   .service-info__row {

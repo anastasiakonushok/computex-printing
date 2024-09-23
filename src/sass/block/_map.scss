@@ -23,28 +23,4 @@
 //   filter: none;
 // }
 
-@include mq(tablet-wide, min) {
-  .map-section {
-    &__row {
-        @include hover {
-            opacity: 1;
-            transition: all 0.3s ease;
-        }
-    }
-    &__social {
-       @include hover {
-            opacity: 1;
-            transition: all 0.3s ease;
-       }
-    }
-  }
-}
 
-  @include mq(tablet-wide, max) {
-    .map-section {
-      &__info {
-        flex-direction: column;
-        gap: 30px;
-      }
-    }
-  }
