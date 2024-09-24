@@ -7,11 +7,11 @@ block page
             .container.hero__container 
                 .hero__title.super-text computex
                 h1  Ваш Надежный Партнер в Мире Качественной Печати
-            a(href="").hero__link
+            a(href="#id-service").hero__link
                 svg(width="31" height="40" viewBox="0 0 31 59" fill="none" xmlns="http://www.w3.org/2000/svg")
                     rect(x="1" y="1" width="28.09" height="57" rx="14.045" stroke="white" stroke-width="2")
                     circle(cx="15" cy="40" r="10" fill="#FA5B18")                        
-        section.all-service 
+        section.all-service(id='id-service') 
             .all-service__container 
                 a(href="").all-service__link.all-service__link--1
                     .all-service__info
@@ -48,27 +48,24 @@ block page
                 a(href="").main-button-dark Контакты
                 .section-about__info 
                     ul 
-                        li 
+                        li(data-aos="fade-left") 
                             span.number 01/
                             h3 Современное оборудование: 
                             p регулярная модернизация техники и работа на новейших принтерах и плоттерах.
-                        li 
+                        li(data-aos="fade-left") 
                             span.number 02/
                             h3 Качественные материалы: 
                             p Используем только проверенные расходные материалы, всегда в наличии широкий выбор для бесперебойного производства.
-                        li 
+                        li(data-aos="fade-left") 
                             span.number 03/
                             h3 Профессиональная команда:  
                             p В штате дизайнеры, полиграфисты и печатники с большим опытом работы.
-                        li 
+                        li(data-aos="fade-left") 
                             span.number 04/
                             h3 Соблюдение сроков и оперативная печать:
                             p Отлаженные рабочие процессы позволяют оперативно принимать срочные заказы.
         include chunk/reference
         include chunk/works
-        section.section-contact 
-            .container 
-                h2 Контакты
         include chunk/map
     include chunk/footer
 
