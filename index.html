@@ -7,9 +7,6 @@
     <title>Печатный центр</title>
     <link rel="icon" type="image/png" href="../../img/favicon.png">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=4db04c29-57a4-4ebd-af68-af6643fe7e68&amp;lang=ru_RU"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/main.css">
@@ -19,11 +16,11 @@
       <div class="container"> 
         <nav class="nav header__nav">
           <ul> 
-            <li><a href="">Услуги</a></li>
-            <li><a href="">портфолио</a></li>
-            <li><a href=""> <img src="./img/logo-computex.svg" alt=""></a></li>
+            <li><a href="./index.html#id-service">Услуги</a></li>
+            <li><a href="">Портфолио</a></li>
+            <li><a href="./index.html"> <img src="./img/logo-computex.svg" alt=""></a></li>
             <li><a href="">Для бизнеса</a></li>
-            <li> <a href="">Контакты</a></li>
+            <li> <a href="./contact.html">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -33,13 +30,13 @@
         <div class="container hero__container"> 
           <div class="hero__title super-text">computex</div>
           <h1> Ваш Надежный Партнер в Мире Качественной Печати</h1>
-        </div><a class="hero__link" href="">
+        </div><a class="hero__link" href="#id-service">
           <svg width="31" height="40" viewBox="0 0 31 59" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="28.09" height="57" rx="14.045" stroke="white" stroke-width="2"></rect>
             <circle cx="15" cy="40" r="10" fill="#FA5B18">                       </circle>
           </svg></a>
       </section>
-      <section class="all-service"> 
+      <section class="all-service" id="id-service"> 
         <div class="all-service__container"> <a class="all-service__link all-service__link--1" href="">
             <div class="all-service__info"><img class="all-service__bg all-service__bg--1" src="./img/card.png" alt="">
               <h2 class="title-black">полиграфия</h2>
@@ -68,19 +65,19 @@
           <h2>Наши<br>Преимущества</h2><a class="main-button-dark" href="">Контакты</a>
           <div class="section-about__info"> 
             <ul> 
-              <li> <span class="number">01/</span>
+              <li data-aos="fade-left"> <span class="number">01/</span>
                 <h3>Современное оборудование: </h3>
                 <p>регулярная модернизация техники и работа на новейших принтерах и плоттерах.</p>
               </li>
-              <li> <span class="number">02/</span>
+              <li data-aos="fade-left"> <span class="number">02/</span>
                 <h3>Качественные материалы: </h3>
                 <p>Используем только проверенные расходные материалы, всегда в наличии широкий выбор для бесперебойного производства.</p>
               </li>
-              <li> <span class="number">03/</span>
+              <li data-aos="fade-left"> <span class="number">03/</span>
                 <h3>Профессиональная команда:  </h3>
                 <p>В штате дизайнеры, полиграфисты и печатники с большим опытом работы.</p>
               </li>
-              <li> <span class="number">04/</span>
+              <li data-aos="fade-left"> <span class="number">04/</span>
                 <h3>Соблюдение сроков и оперативная печать:</h3>
                 <p>Отлаженные рабочие процессы позволяют оперативно принимать срочные заказы.</p>
               </li>
@@ -123,19 +120,10 @@
         <div class="container"> 
           <h2>Наши<br>работы</h2><a class="main-button-white" href="">все работы </a>
           <div class="section-works__grid"> 
-            <div class="section-works__block"> </div>
-            <div class="section-works__block"><img src="./img/work1.png" alt=""></div>
-            <div class="section-works__block"><img src="./img/work1.png" alt=""></div>
-            <div class="section-works__block"><img src="./img/work1.png" alt=""></div>
-            <div class="section-works__block"><img src="./img/work1.png" alt=""></div>
+            <div class="section-works__block"> </div><a class="section-works__block" href="./img/work1.png" data-fancybox="gallery"><img src="./img/work1.png" alt=""></a><a class="section-works__block" href="./img/work1.png" data-fancybox="gallery"><img src="./img/work1.png" alt=""></a><a class="section-works__block" href="./img/work1.png" data-fancybox="gallery"><img src="./img/work1.png" alt=""></a><a class="section-works__block" href="./img/work1.png" data-fancybox="gallery"><img src="./img/work1.png" alt=""></a>
             <div class="section-works__block"></div>
           </div>
         </div><img class="section-works__img" src="./img/green-ring.svg" alt="">
-      </section>
-      <section class="section-contact"> 
-        <div class="container"> 
-          <h2>Контакты</h2>
-        </div>
       </section>
       <section class="map-section">
         <div class="container">
