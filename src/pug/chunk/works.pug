@@ -1,18 +1,20 @@
 section.section-works 
     .container 
-        h2 Наши
-            br
-            | работы
+        .section-works__text.flex.text-sub
+            h2 Наши
+                br
+                | работы
+            p Индивидуальный подход к каждому заказу! Мы создаем печатные решения, отражающие вашу уникальность.
         a(href="").main-button-white все работы 
-        .section-works__grid 
-            .section-works__block 
-            a(href="./img/work1.png").section-works__block(data-fancybox="gallery")
-                img(src="./img/work1.png", alt="")
-            a(href="./img/work1.png").section-works__block(data-fancybox="gallery")
-                img(src="./img/work1.png", alt="")
-            a(href="./img/work1.png").section-works__block(data-fancybox="gallery")
-                img(src="./img/work1.png", alt="")
-            a(href="./img/work1.png").section-works__block(data-fancybox="gallery")
-                img(src="./img/work1.png", alt="")
+        .section-works__grid  
+            a(href="./img/work-1.jpg").section-works__block(data-fancybox="gallery")
+                img(src="./img/work-1.jpg" alt="")
+            a(href="./img/work-1.jpg").section-works__block(data-fancybox="gallery")
+                img(src="./img/work-1.jpg" alt="")
             .section-works__block
-    img(src="./img/green-ring.svg", alt="").section-works__img
+            .section-works__block
+            a(href="./img/work-2.jpg").section-works__block(data-fancybox="gallery")
+                img(src="./img/work-2.jpg" alt="")
+            a(href="./img/work1.png").section-works__block(data-fancybox="gallery")
+                img(src="./img/work1.png" alt="")
+    //- img(src="./img/green-ring.svg" alt="").section-works__img

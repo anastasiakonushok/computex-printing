@@ -37,10 +37,12 @@
         padding: 40px;
         width: 100%;
         height: 100%;
-        h2 {
+        h3 {
             font-family: 'Travels';
             text-transform: uppercase;
             font-weight: 600;
+            width: 90%;
+            line-height: 140%;
         }
         .title-black {
             color:var(--dark-color);
@@ -66,7 +68,7 @@
     }
     &__bg--6 {
         height: 85%;
-        right: -18%;
+        right: 0;
         bottom:-15px;
     }
 }
@@ -82,18 +84,5 @@
             } 
         }
     }
-    // .map-section {
-    //   &__row {
-    //       @include hover {
-    //           opacity: 1;
-    //           transition: all 0.3s ease;
-    //       }
-    //   }
-    //   &__social {
-    //      @include hover {
-    //           opacity: 1;
-    //           transition: all 0.3s ease;
-    //      }
-    //   }
-    // }
+    
   }

@@ -89,7 +89,29 @@ p {
         font-weight: 700;
     }
 }
-
+h2 {
+    font-family: 'Travels';
+    font-size: var(--h2-font);
+    font-weight: 700;
+    line-height: 109%;
+    text-transform: uppercase;
+}
+.text-sub {
+    justify-content: space-between;
+    align-items:end;
+    margin-bottom: 60px;
+    p {
+        font-size: 12px;
+        text-align: right;
+        width: 30%;
+        font-style: italic;
+        text-transform: uppercase;
+        span {
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+}
 .button-primary {
     @include button-orange(15px 30px);
   }
@@ -333,6 +355,7 @@ p {
     }
 }
 .main-button-dark {
+    display: inline-block;
     color: #000000;
     text-transform: uppercase;
     cursor: pointer;
@@ -346,6 +369,7 @@ p {
     transition: color .2s, background-color .2s;
 }
 .main-button-white {
+    display: inline-block;
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;

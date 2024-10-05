@@ -15,6 +15,7 @@
         width: 50%;
         text-align: center;
     }
+   
     &__container {
         display: flex;
         flex-direction: column;
@@ -42,3 +43,42 @@
         display: inline-block;
     }
 }
+
+.container_mouse {
+    text-align: center;
+    color: var(--main-orange);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .container_mouse .mouse-btn {
+    width: 25px;
+    height: 40px;
+    border: 2px solid var(--main-white);
+    border-radius: 30px;
+    display: flex;
+  }
+  
+  .container_mouse .mouse-btn .mouse-scroll {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: var(--main-orange);
+    border-radius: 50%;
+    margin: auto;
+    animation: scrolling 1.2s linear infinite;
+  }
+  
+  
+  @keyframes scrolling {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }

@@ -2,7 +2,7 @@
     // height: 350px;
     h2 {
       font-family: 'Travels';
-      font-size: 52px;
+      font-size: var(--h2-font);
       font-weight: 700;
       line-height: 109%;
       text-transform: uppercase;
