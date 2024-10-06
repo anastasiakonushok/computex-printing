@@ -20,6 +20,7 @@
             display: flex;
             justify-content: space-between;
             align-items:center;
+            position: relative;
         }
         li:not(:last-child) {
             padding: 30px 0px 30px 30px;

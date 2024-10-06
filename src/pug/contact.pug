@@ -3,6 +3,42 @@ extends layout/app
 block page 
     include chunk/header-black
     main.main
-        
+        .section-contact.section-hero 
+            .container 
+                .section-hero__title 
+                    h1 Контакты
+                .section-contact__block.flex
+                    .contact-list 
+                        ul.flex.contact-list__list
+                            li.contact-list__item   
+                                p.contact-list__title телефоны
+                                a(href="").contact-list__bigtext +375 (29) 984-27-37 
+                                a(href="").contact-list__bigtext  +375 (29) 984-27-37 
+                            li.contact-list__item 
+                                p.contact-list__title адрес
+                                a(href="").contact-list__bigtext ГОМЕЛЬ УЛ. КИРОВА, 35
+                            li.contact-list__item 
+                                p.contact-list__title почта
+                                a(href="").contact-list__bigtext 123@mail.ru
+                            li.contact-list__item 
+                                p.contact-list__title реквизиты
+                                a(href="").contact-list__bigtext 123@mail.ru
+                    .social-list 
+                        ul 
+                            li 
+                                a(href="") instargram
+                                svg(width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M11.25 33.75L33.75 11.25" stroke="#C1C2C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    path(d="M15.4688 11.25H33.7499V29.5312" stroke="#C1C2C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            li 
+                                a(href="") viber
+                                svg(width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M11.25 33.75L33.75 11.25" stroke="#C1C2C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    path(d="M15.4688 11.25H33.7499V29.5312" stroke="#C1C2C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            li 
+                                a(href="")   telegram
+                                svg(width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M11.25 33.75L33.75 11.25" stroke="#C1C2C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    path(d="M15.4688 11.25H33.7499V29.5312" stroke="#C1C2C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
     include chunk/footer
 

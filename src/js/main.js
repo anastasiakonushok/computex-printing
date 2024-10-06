@@ -12,7 +12,7 @@ $(function () {
             $("body").toggleClass("body-lock");
         });
     });
-    AOS.init();
+    // AOS.init();
     ymaps.ready(init);
     function init() {
         // Создание карты.
@@ -72,119 +72,116 @@ $(function () {
             return false;
         });
     });
-    //header fix
-    $(document).ready(function () {
-        var lastScrollTop = 0;
-        $(window).scroll(function (event) {
-            var st = $(this).scrollTop();
-            if (st > 200) { // Check if the scroll position is greater than 200px
-                if (st > lastScrollTop) {
-                    $(".header").addClass("header_down");
-                    $(".header").removeClass("header_up");
-                    $(".button-up").addClass("scroll-top_down");
-                    $(".button-up").removeClass("scroll-top_up");
-                } else {
-                    $(".header").addClass("header_up");
-                    $(".header").removeClass("header_down");
-                    $(".button-up").addClass("scroll-top_up");
-                    $(".button-up").removeClass("scroll-top_down");
-                }
-            } else {
-                $(".header").removeClass("header_down header_up");
-                $(".button-up").removeClass("scroll-top_down scroll-top_up");
-            }
-            lastScrollTop = st;
-        });
-    });
 
 
-    $(document).ready(function () {
-        $('.hero-service').on('mousemove', function (e) {
-            var $this = $(this);
-            var offsetX = (e.pageX - $this.offset().left) / $this.width() * 100;
-            var offsetY = (e.pageY - $this.offset().top) / $this.height() * 100;
 
-            $this.find('.hero-service__img').css('transform', 'translate(' + (offsetX - 50) / 10 + '%, ' + (offsetY - 50) / 10 + '%)');
-        });
 
-        $('.hero-service').on('mouseleave', function () {
-            $(this).find('.hero-service__img').css('transform', 'translate(0, 0)');
-        });
-    });
+});
 
-    $(document).ready(function () {
-        var lastScrollTopr = 0;
-        $(window).scroll(function (event) {
-            var str = $(this).scrollTop();
-            if (str > lastScrollTopr) {
-                $(".button-up").addClass("scroll-top_down");
-                $(".button-up").removeClass("scroll-top_up");
-            } else if (str <= 800) {
-                $(".button-up").removeClass("scroll-top_up");
-            } else {
-                $(".button-up").addClass("scroll-top_up");
-                $(".button-up").removeClass("scroll-top_down");
-            }
-            lastScrollTopr = str;
-        });
-    });
 
-    // counter
-    $('.counter').each(function () {
-        var startNumber = 0;
-        var $item = $(this);
-        var stop;
 
-        function counterUp() {
-            var increment = ($item.data('number') > 100) ? 2 : 1; // Увеличиваем на 2, если число больше 100, иначе на 1
-            startNumber += increment;
-            $item.text(startNumber);
+gsap.registerPlugin(ScrollTrigger);
 
-            if (startNumber >= $item.data('number')) { // Изменяем условие завершения на >= для правильной остановки счетчика
-                clearInterval(stop);
-            }
-        }
+// Создаем timeline для последовательной анимации
+const tl = gsap.timeline();
 
-        var intervalTime = ($item.data('number') > 100) ? 10 : 50; // Выбираем интервал в зависимости от значения числа
-        stop = setInterval(function () {
-            counterUp();
-        }, intervalTime); // Используем переменную intervalTime в качестве интервала
-    });
-    //
+// Анимация для закрашивания фона
+tl.to(".background", {
+    duration: 2,
+    width: "100%",
+    ease: "expo.inOut"
+});
 
-    // Tab navigation
-    $('.tab-links a').on('click', function (e) {
-        e.preventDefault();
+// Анимация появления текста по буквам после закрашивания фона
+tl.from(".hero__title span", {
+    duration: 1.5,
+    opacity: 0,
+    y: -50,
+    ease: "expo.out",
+    stagger: 0.1 // Задержка между появлением каждой буквы
+}, "-=1.5") // Запуск анимации текста спустя 1.5 сек от начала анимации фона
 
-        var currentAttrValue = $(this).attr('href');
+// Анимация для h1 после появления заголовка
+tl.from(".hero h1", {
+    duration: 2,
+    opacity: 0,
+    y: 50,
+    ease: "expo.out",
+    delay: 0.3
+}, "-=1.5"); // Запуск анимации h1 спустя 1 сек после старта появления букв
 
-        $('.tab' + currentAttrValue).addClass('active').siblings().removeClass('active');
+// Анимация для секции "Наши Преимущества"
+gsap.from(".section-about__text h2", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "expo.out",
+    scrollTrigger: {
+        trigger: ".section-about",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});
 
-        $(this).parent('li').addClass('active').siblings().removeClass('active');
-    });
+gsap.from(".section-about__text p", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "expo.out",
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: ".section-about",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});
 
-    (function ($) { // Begin jQuery
-        $(function () { // DOM ready
-            // If a link has a dropdown, add sub menu toggle.
-            $('nav ul li a:not(:only-child)').click(function (e) {
-                $(this).siblings('.nav-dropdown').toggle();
-                // Close one dropdown when selecting another
-                $('.nav-dropdown').not($(this).siblings()).hide();
-                e.stopPropagation();
-            });
-            // Clicking away from dropdown will remove the dropdown class
-            $('html').click(function () {
-                $('.nav-dropdown').hide();
-            });
-            // Toggle open and close nav styles on click
-            $('#nav-toggle').click(function () {
-                $('nav ul').slideToggle();
-            });
-            // Hamburger to X toggle
-            $('#nav-toggle').on('click', function () {
-                this.classList.toggle('active');
-            });
-        }); // end DOM ready
-    })(jQuery); // end jQuery
+gsap.from(".main-button-dark", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    ease: "expo.out",
+    delay: 0.8,
+    scrollTrigger: {
+        trigger: ".section-about",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});
 
+// Анимация для списка li с использованием stagger
+gsap.from(".section-about__info li", {
+    opacity: 0,
+    x: 100, // Появление справа
+    duration: 1,
+    ease: "expo.out",
+    stagger: 0.5, // Задержка между анимациями элементов
+    scrollTrigger: {
+        trigger: ".section-about__info",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});
+
+
+// Анимация для списка li с использованием stagger
+gsap.from(".accordion", {
+    opacity: 0,
+    x: 100, // Появление справа
+    duration: 1,
+    ease: "expo.out",
+    stagger: 0.5, // Задержка между анимациями элементов
+    scrollTrigger: {
+        trigger: ".accordion-wrapp",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});
+
+// Анимация для header, который появляется сверху
+gsap.from("header", {
+    y: -100, // Начальная позиция выше экрана
+    opacity: 0, // Начальная прозрачность
+    duration: 1, // Длительность анимации
+    ease: "expo.out", // Плавная анимация
 });

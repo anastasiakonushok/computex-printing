@@ -2,11 +2,11 @@
     position: relative;
     overflow: hidden;
     z-index: 10;
-    height: calc(100svh - 97px);
-    background:var(--main-pur);
+    height: 100vh;
+    // background:var(--main-pur);
     display: flex;
     align-items:center;
-    
+    padding-top: 38px;
     h1 {
         color:var(--main-white);
         text-transform: uppercase;
@@ -43,7 +43,15 @@
         display: inline-block;
     }
 }
-
+.background {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  background-color: var(--main-pur);
+  z-index: -1;
+}
 .container_mouse {
     text-align: center;
     color: var(--main-orange);
