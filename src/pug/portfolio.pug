@@ -1,0 +1,37 @@
+extends layout/app
+
+block page 
+    include chunk/header-black
+    main.main
+        section.text-sub.section-hero
+            .container.section-hero__container
+                .text-sub__wrapp.flex
+                    h1 Портфолио
+                    p Индивидуальный подход к каждому заказу! Мы создаем печатные решения, отражающие вашу уникальность
+                a(href="./contact.html").main-button-white контакты 
+        section.section-portfolio
+            .container 
+                .section-portfolio__grid 
+                    a(href="./img/work-1.jpg").section-portfolio__block(data-fancybox="gallery")
+                        img(src="./img/work-1.jpg" alt="")
+                        h4 Вывеска для Computex
+                    a(href="./img/work-1.jpg").section-portfolio__block(data-fancybox="gallery")
+                        img(src="./img/work-1.jpg" alt="")
+                        h4 Вывеска для Computex
+                    a(href="./img/work-1.jpg").section-portfolio__block(data-fancybox="gallery")
+                        img(src="./img/work-1.jpg" alt="")
+                        h4 Вывеска для Computex
+                    a(href="./img/work-2.jpg").section-portfolio__block(data-fancybox="gallery")
+                        img(src="./img/work-2.jpg" alt="")
+                        h4 Вывеска для Computex
+                    a(href="./img/print-img-4.jpg").section-portfolio__block(data-fancybox="gallery")
+                        img(src="./img/print-img-4.jpg" alt="")
+                        h4 Вывеска для Computex
+                    a(href="./img/work-1.jpg").section-portfolio__block(data-fancybox="gallery")
+                        img(src="./img/work-1.jpg" alt="")
+                        h4 Вывеска для Computex
+                    a(href="./img/work1.png").section-portfolio__block(data-fancybox="gallery")
+                        img(src="./img/work1.png" alt="")
+                        h4 Вывеска для Computex
+    include chunk/footer
+

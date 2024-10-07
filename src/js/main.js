@@ -6,12 +6,20 @@ $(function () {
     //Бургер меню
 
     $(document).ready(function () {
-        $(".burger-menu").click(function () {
-            $(".burger-menu").toggleClass("burger-menu-active");
-            $(".header-bottom").toggleClass("show");
+        $(".burger").click(function () {
+            $(".burger").toggleClass("burger-menu-active");
+            $(".header").toggleClass("show");
             $("body").toggleClass("body-lock");
         });
+    
+        // Удаляем классы после перехода по ссылке
+        $(".header a").click(function () {
+            $(".burger").removeClass("burger-menu-active");
+            $(".header").removeClass("show");
+            $("body").removeClass("body-lock");
+        });
     });
+    
     // AOS.init();
     ymaps.ready(init);
     function init() {

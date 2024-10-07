@@ -36,6 +36,7 @@
         position: relative;
         width: fit-content;
         padding-bottom: 15px;
+        overflow-wrap: break-word;
         &::after {
             content: '';
             display: block;
@@ -102,8 +103,12 @@
             flex-direction: column;
             gap: 40px;
         }
+        
         .contact-list {
             width: 100%;
+            &__bigtext {
+                width: 100%;
+            }
         }
         .social-list {
             width: 100%;

@@ -20,7 +20,7 @@
     &__nav {
         position: relative;
         z-index: 20;
-        padding: 60px 0;
+        padding: 60px;
         ul {
             width: 100%;
             display: flex;
@@ -97,6 +97,7 @@
             font-size: 14em;
         }
         &__nav {
+            padding: 60px 20px;
             ul {
                 flex-direction: column;
                 align-items:center;

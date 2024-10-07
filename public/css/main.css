@@ -299,7 +299,7 @@ body {
 }
 
 .body-lock {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .wrapp-page {
@@ -348,7 +348,7 @@ h3 {
 
 p {
   font-size: var(--regular-font);
-  line-height: 140%;
+  line-height: 120%;
   font-weight: 400;
 }
 
@@ -382,7 +382,7 @@ p {
 .inner-content ul li {
   margin-bottom: 15px;
   font-size: var(--regular-font);
-  line-height: 140%;
+  line-height: 120%;
   font-weight: 400;
 }
 
@@ -391,7 +391,7 @@ p {
 }
 
 h2 {
-  font: 700 var(--h2-font)/140% "Travels";
+  font: 700 var(--h2-font)/120% "Travels";
   text-transform: uppercase;
 }
 
@@ -412,6 +412,12 @@ h2 {
 .text-sub p span {
   font-style: italic;
   font-weight: 600;
+}
+
+.text-sub__wrapp {
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 40px;
 }
 
 .button-primary {
@@ -501,7 +507,7 @@ h2 {
 .inner-content ul li {
   margin-bottom: 15px;
   font-size: var(--regular-font);
-  line-height: 140%;
+  line-height: 120%;
   font-weight: 400;
 }
 
@@ -560,7 +566,7 @@ h2 {
 
 .tab-links li a {
   font-size: var(--regular-font);
-  line-height: 140%;
+  line-height: 120%;
   font-weight: 400;
   font-weight: 600;
   text-decoration: none;
@@ -770,6 +776,7 @@ h2 {
   position: relative;
   width: fit-content;
   padding-bottom: 15px;
+  overflow-wrap: break-word;
 }
 
 .contact-list__bigtext::after {
@@ -808,6 +815,10 @@ h2 {
   text-transform: uppercase;
   display: block;
   color: var(--main-white);
+}
+
+.section-contact-hero {
+  margin-bottom: 100px;
 }
 
 @font-face {
@@ -876,7 +887,7 @@ h2 {
 .footer__nav {
   position: relative;
   z-index: 20;
-  padding: 60px 0;
+  padding: 60px;
 }
 
 .footer__nav ul {
@@ -921,9 +932,29 @@ h2 {
   font-weight: 700;
 }
 
+.header__mobile-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header-black {
   background: var(--bg-color);
   position: relative;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  transition: all 0.3s ease;
+  background: var(--main-orange);
+  display: block;
+  height: 3px;
+  width: 40px;
 }
 
 .hero {
@@ -959,11 +990,19 @@ h2 {
 }
 
 .section-hero {
-  padding: 100px 0px;
+  padding-top: 100px;
+}
+
+.section-hero p {
+  color: var(--main-white);
 }
 
 .section-hero h1 {
   color: var(--main-white);
+}
+
+.section-hero__container {
+  justify-content: space-between;
 }
 
 .super-text {
@@ -1024,19 +1063,89 @@ h2 {
   }
 }
 
-.map-section h2 {
-  font: 700 var(--h2-font)/109% var(--body-font);
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
 #map {
   height: 300px;
 }
 
 .ymaps-2-1-79-ground-pane {
   filter: grayscale(100%);
+}
+
+.section-portfolio {
+  padding-bottom: 100px;
+}
+
+.section-portfolio__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Задаем фиксированные колонки */
+  grid-template-rows: repeat(9, 100px);
+  /* Задаем фиксированную высоту строк */
+  column-gap: 3em;
+  /* Промежутки между колонками */
+  row-gap: 5em;
+  /* Промежутки между строками */
+}
+
+.section-portfolio__block {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-portfolio__block img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.section-portfolio__block h4 {
+  color: var(--main-white);
+  text-transform: uppercase;
+}
+
+.section-portfolio__block:nth-child(1) {
+  grid-row: 1/4;
+  /* Первый элемент занимает строки с 1 по 4 */
+}
+
+.section-portfolio__block:nth-child(2) {
+  grid-row: 1/4;
+  /* Второй элемент занимает строки с 1 по 4 */
+}
+
+.section-portfolio__block:nth-child(3) {
+  grid-row: 1/4;
+  /* Третий элемент занимает строки с 1 по 4 */
+}
+
+.section-portfolio__block:nth-child(4) {
+  grid-row: 4/7;
+  /* Четвертый элемент занимает строки с 4 по 7 */
+}
+
+.section-portfolio__block:nth-child(5) {
+  grid-row: 4/7;
+  /* Пятый элемент занимает строки с 4 по 7 */
+  grid-column: 2/4;
+  /* И колонки с 2 по 4 */
+}
+
+.section-portfolio__block:nth-child(6) {
+  grid-row: 7/10;
+  /* Шестой элемент занимает строки с 7 по 10 */
+  grid-column: 1/3;
+  /* И колонки с 1 по 3 */
+}
+
+.section-portfolio__block:nth-child(7) {
+  grid-column: 3/4;
+  /* Седьмой элемент занимает колонки с 3 по 4 */
+  grid-row: 7/10;
+  /* И строки с 7 по 10 */
 }
 
 .reference {
@@ -1163,7 +1272,7 @@ h2 {
 }
 
 .all-service__info h3 {
-  font: 600 var(--20-font)/140% var(--body-font);
+  font: 600 var(--20-font)/120% var(--body-font);
   text-transform: uppercase;
   width: 83%;
   position: relative;
@@ -1337,6 +1446,14 @@ h2 {
     transition: all 0.3s ease;
     color: var(--main-green);
   }
+
+  .header__mobile-logo {
+    display: none;
+  }
+
+  .header .burger {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1345,6 +1462,20 @@ h2 {
     background: rgba(255, 255, 255, 0.8901960784);
     gap: 30px;
     transition: all 0.6s ease;
+  }
+
+  .main-button-white:hover {
+    transition: all 0.3s ease;
+    background: var(--main-white);
+    color: var(--dark-color);
+    transition: all 0.3 ease-in;
+  }
+
+  .main-button-dark:hover {
+    transition: all 0.3s ease;
+    color: var(--main-white);
+    background: var(--dark-color);
+    transition: all 0.3 ease-in;
   }
 
   .contact-list__bigtext:hover {
@@ -1434,7 +1565,7 @@ h2 {
     --h2-font: 1.3em;
     --h3-font: 1.1em;
     --h3-sepical-font: 2em;
-    --20-font: 1em;
+    --20-font: 1.2em;
     --font-128: 3em;
     --second-font: 1em;
     --big-text: 15em;
@@ -1466,6 +1597,12 @@ h2 {
 
   .text-sub p {
     width: 100%;
+  }
+
+  .text-sub__wrapp {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
   }
 
   .container {
@@ -1530,6 +1667,10 @@ h2 {
     width: 100%;
   }
 
+  .section-contact .contact-list__bigtext {
+    width: 100%;
+  }
+
   .section-contact .social-list {
     width: 100%;
   }
@@ -1538,10 +1679,43 @@ h2 {
     font-size: 14em;
   }
 
+  .footer__nav {
+    padding: 60px 20px;
+  }
+
   .footer__nav ul {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+
+  .hero {
+    padding-top: 68px;
+  }
+
+  .hero h1 {
+    width: 100%;
+  }
+
+  .section-portfolio__grid {
+    grid-template-columns: 1fr;
+    /* Одна колонка на мобильных устройствах */
+    grid-template-rows: auto;
+    /* Автоматическая высота строк */
+    row-gap: 2em;
+    /* Меньший промежуток между строками */
+  }
+
+  .section-portfolio__block:nth-child(1),
+  .section-portfolio__block:nth-child(2),
+  .section-portfolio__block:nth-child(3),
+  .section-portfolio__block:nth-child(4),
+  .section-portfolio__block:nth-child(5),
+  .section-portfolio__block:nth-child(6),
+  .section-portfolio__block:nth-child(7) {
+    grid-column: span 1;
+    /* Все блоки занимают всю ширину */
+    grid-row: auto;
   }
 
   .accordion-wrapp {
@@ -1590,6 +1764,46 @@ h2 {
     display: none;
   }
 
+  .header.show {
+    background: var(--dark-color);
+    height: 100vh;
+  }
+
+  .header.show .nav {
+    padding-top: 100px;
+    display: block;
+  }
+
+  .header.show .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header.show .nav ul li:nth-child(3) {
+    display: none;
+  }
+
+  .header.show .nav ul a {
+    font-size: var(--h3-sepical-font);
+  }
+
+  .header.show .burger-menu-active span:nth-child(1) {
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+
+  .header.show .burger-menu-active span:nth-child(2) {
+    display: none;
+  }
+
+  .header.show .burger-menu-active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -7px;
+    transition: all 0.3s ease;
+  }
+
   .all-service__container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -1606,6 +1820,7 @@ h2 {
     --font-128: 2em;
     --second-font: 1em;
     --big-text: 10em;
+    --20-font: 1.1em;
   }
 }
 

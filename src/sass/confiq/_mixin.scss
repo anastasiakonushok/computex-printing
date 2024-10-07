@@ -118,7 +118,7 @@ $height-breakpoints: (
 //fonts
 @mixin regular {
     font-size: var(--regular-font);
-    line-height: 140%;
+    line-height: 120%;
     font-weight: 400;
 }
 

@@ -40,7 +40,7 @@
         --h2-font: 1.3em;
         --h3-font: 1.1em;
         --h3-sepical-font: 2em;
-        --20-font:1em;
+        --20-font:1.2em;
         --font-128:3em;
         --second-font: 1em;
         --big-text:15em;
@@ -54,6 +54,7 @@
         --font-128:2em;
         --second-font: 1em;
         --big-text:10em;
+        --20-font:1.1em;
     }
 
     @include mq-height("tablet", max) {
@@ -62,4 +63,6 @@
 
     }
     
+
+
 }

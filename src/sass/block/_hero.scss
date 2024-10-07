@@ -31,9 +31,15 @@
    }
 }
 .section-hero {
-  padding: 100px 0px;
+  padding-top: 100px;
+  p {
+    color:var(--main-white);
+  }
   h1 {
     color:var(--main-white);
+  }
+  &__container {
+    justify-content: space-between;
   }
 }
 .super-text {
@@ -94,5 +100,14 @@
     100% {
       opacity: 1;
       transform: translateY(10px);
+    }
+  }
+
+  @include mq(tablet-wide, max) { 
+    .hero {
+      padding-top: 68px;
+      h1 {
+        width: 100%;
+      }
     }
   }
