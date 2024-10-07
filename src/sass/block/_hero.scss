@@ -32,14 +32,25 @@
 }
 .section-hero {
   padding-top: 100px;
+  margin-bottom: 100px;
   p {
     color:var(--main-white);
+    width: 45%;
   }
   h1 {
     color:var(--main-white);
+    width: 50%;
   }
   &__container {
     justify-content: space-between;
+  }
+  &__img {
+    display: block;
+    width: 65%;
+    height: 350px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-top: 60px;
   }
 }
 .super-text {

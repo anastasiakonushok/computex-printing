@@ -52,6 +52,9 @@
 
 @include mq(tablet-wide, max) { 
     .section-about  {
+        .number {
+            left: 0;
+        }
         &__info {
             width: 100%;
         }

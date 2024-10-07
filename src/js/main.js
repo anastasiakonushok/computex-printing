@@ -11,7 +11,7 @@ $(function () {
             $(".header").toggleClass("show");
             $("body").toggleClass("body-lock");
         });
-    
+
         // Удаляем классы после перехода по ссылке
         $(".header a").click(function () {
             $(".burger").removeClass("burger-menu-active");
@@ -19,7 +19,7 @@ $(function () {
             $("body").removeClass("body-lock");
         });
     });
-    
+
     // AOS.init();
     ymaps.ready(init);
     function init() {
@@ -192,4 +192,17 @@ gsap.from("header", {
     opacity: 0, // Начальная прозрачность
     duration: 1, // Длительность анимации
     ease: "expo.out", // Плавная анимация
+});
+
+
+gsap.to(".section-hero__img", {
+    width: "100%", // Увеличение ширины до 100%
+    ease: "power1.out", // Плавное изменение
+    scrollTrigger: {
+        trigger: ".section-service", // Триггер для активации анимации
+        start: "top 90%", // Анимация запускается, когда секция на 80% видна
+        end: "top 10%", // Анимация заканчивается, когда секция на 20% видна
+        scrub: true, // Плавная анимация, синхронизированная со скроллом
+        toggleActions: "play none none none", // Поведение при прокрутке
+    }
 });

@@ -1,0 +1,28 @@
+extends layout/app
+
+block page 
+    include chunk/header-black
+    main.main
+        section.text-sub.section-hero
+            .container.section-hero__container
+                .text-sub__wrapp.flex
+                    h1 Полиграфические решения, созданные для вас
+                    p Мы создаем полиграфическую продукцию, которая подчеркивает уникальность вашего бренда и оставляет неизгладимое впечатление. Визитки, буклеты, постеры или рекламные материалы — каждая деталь отражает ваш стиль и ценности.
+                a(href="./contact.html").main-button-white контакты 
+                img(src="../img/polig.png", alt="").section-hero__img
+        section.section-service
+            .container 
+                .section-service__wrapp 
+                    .section-service__block
+                        h2 О услуге
+                        p 
+                    .section-service__block 
+                        ul 
+                            li 
+                                p 
+                            li 
+                                p 
+                            li 
+                                p
+    include chunk/footer
+
