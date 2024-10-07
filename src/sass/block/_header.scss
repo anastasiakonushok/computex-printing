@@ -21,6 +21,12 @@
 
 .header-black {
     background:var(--bg-color);
+    position: relative;
 }
 
 
+@include mq(tablet, max) {
+    .nav {
+        display: none;
+    }
+}

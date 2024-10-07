@@ -95,3 +95,10 @@
         }
     }
   }
+
+  @include mq(tablet-wide, max) { 
+    .accordion-wrapp {
+        margin-left: 0;
+        width: 100%;
+    }
+  }

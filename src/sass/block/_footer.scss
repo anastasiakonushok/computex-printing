@@ -1,4 +1,40 @@
+#map {
+    height: 150px;
+}
+.footer {
+    overflow: hidden;
+    position: relative;
+    .super-text {
+        position: absolute;
+        opacity: 0.2;
+        font-size: 18em;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+    &__container {
+        background:var(--main-orange);
+        position: relative;
+    }
+    &__nav {
+        position: relative;
+        z-index: 20;
+        padding: 60px 0;
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
 
+            a {
+                color:var(--main-white);
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+    }
+}
 .button-up {
     display: block;
     float: right;
@@ -7,22 +43,6 @@
     padding: 16px 20px;
     background: #fff;
     box-shadow: 0 6px 10px 0 rgba(68, 68, 68, 0.212);
-}
-
-@include mq(tablet-wide, max) {
-    .footer {
-        &__wrapp {
-            flex-wrap: wrap;
-            // flex-direction: column;
-            gap: 60px;
-        }
-
-        .contact,
-        .nav-footer,
-        .contact-2 {
-            width: 45%;
-        }
-    }
 }
 
 @include mq(tablet, max) {
@@ -65,7 +85,22 @@
     .footer {
         a {
             @include hover {
-                color: var(--main-orange);
+                color:var(--main-green);
+            }
+        }
+    }
+}
+
+@include mq(tablet-wide, max) {
+    .footer {
+        .super-text {
+            font-size: 14em;
+        }
+        &__nav {
+            ul {
+                flex-direction: column;
+                align-items:center;
+                gap: 30px;
             }
         }
     }

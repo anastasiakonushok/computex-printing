@@ -16,7 +16,7 @@
     --bg-footer:#1c1c1c;
     
     //font
-    // --body-font: "Open Sans", sans-serif;
+    --body-font: "Travels";
     --big-font: 'Humane Bold';
     //font-size
     --h1-special: 2.8em;
@@ -26,6 +26,7 @@
     --h3-sepical-font: 2.25em;
     --regular-font: 1em;
     --second-font: 1.5em;
+    --20-font:1.3em;
     --font-128:5em;
     --big-text:30em;
 
@@ -38,23 +39,27 @@
         --h1-font: 2em;
         --h2-font: 1.3em;
         --h3-font: 1.1em;
+        --h3-sepical-font: 2em;
+        --20-font:1em;
         --font-128:3em;
         --second-font: 1em;
         --big-text:15em;
     }
     @include mq(phablet, max) {
-        --h1-special: 2em;
+        --h1-special: 1.9em;
         --h1-font: 1.8em;
-        --h2-font: 1.1em;
+        --h2-font: 1.5em;
         --h3-font: 1em;
+        --h3-sepical-font: 1.3em;
         --font-128:2em;
         --second-font: 1em;
-        --big-text:13em;
+        --big-text:10em;
     }
 
     @include mq-height("tablet", max) {
         // Your styles here
         --big-text:26em;
+
     }
     
 }

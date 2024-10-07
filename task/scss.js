@@ -2,42 +2,44 @@ const { src, dest } = require("gulp");
 
 const path = require("../config/path.js");
 const app = require("../config/app.js");
-//Плагины
+// Плагины
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
-const autoprefixer = require("gulp-autoprefixer");
+// const autoprefixer = require('gulp-autoprefixer');
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
-const shorthand =require("gulp-shorthand");
-const  groupCssMediaQueries = require("gulp-group-css-media-queries");
-const  sass = require("gulp-sass")(require("sass"));
-const  sassGlob = require("gulp-sass-glob");
-const  webpCss = require("gulp-webp-css");
+const shorthand = require("gulp-shorthand");
+const groupCssMediaQueries = require("gulp-group-css-media-queries");
+const sass = require("gulp-sass")(require("sass"));
+const sassGlob = require("gulp-sass-glob");
+const webpCss = require("gulp-webp-css");
 
-
-//scss
+// scss
 const scss = () => {
   return src(path.scss.src, { sourcemaps: app.isDev })
     .pipe(
       plumber({
         errorHandler: notify.onError(error => ({
-          title:"css",
-          message: error.message
-        })
-
-        ),
+          title: "SCSS Compilation Error",
+          message: error.relativePath 
+            ? `Error in file: ${error.relativePath} at line ${error.line}, column ${error.column}`
+            : `Error: ${error.message}`, // Обработка случая, когда нет информации о файле
+        })),
       })
     )
-    .pipe(sassGlob())
-    .pipe(sass())
-    .pipe(webpCss())
-    .pipe(autoprefixer())
-    .pipe(shorthand())
-    .pipe(groupCssMediaQueries())
-    .pipe(dest(path.scss.dest, { sourcemaps: app.isDev }))
-    .pipe(rename({suffix:".min"}))
-    .pipe(csso())
-    .pipe(dest(path.scss.dest, { sourcemaps: app.isDev }));
+    .pipe(sassGlob()) // Обрабатываем globs в SCSS
+    .pipe(sass()) // Компилируем SCSS
+    .on('data', (file) => {
+      console.log('Processing file:', file.path);
+    })
+    // .pipe(webpCss()) // Опционально: включение webp в CSS
+    // .pipe(autoprefixer()) // Опционально: префиксы для кросс-браузерности
+    .pipe(shorthand()) // Оптимизация CSS-шорткодов
+    .pipe(groupCssMediaQueries()) // Группировка медиа-запросов
+    .pipe(dest(path.scss.dest)) // Сохранение без минификации
+    .pipe(rename({ suffix: ".min" })) // Переименовываем файл в минифицированный
+    .pipe(csso()) // Минификация CSS
+    .pipe(dest(path.scss.dest)); // Финальное сохранение минифицированного файла
 };
 
 module.exports = scss;

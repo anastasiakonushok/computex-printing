@@ -30,6 +30,12 @@
         bottom: 10px;
    }
 }
+.section-hero {
+  padding: 100px 0px;
+  h1 {
+    color:var(--main-white);
+  }
+}
 .super-text {
     color: var(--main-white);
     text-transform: uppercase;

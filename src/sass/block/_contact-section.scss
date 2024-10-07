@@ -1,4 +1,5 @@
 .section-contact {
+    padding-bottom: 100px;
     h2 {
         color:var(--main-white);
         margin-bottom: 60px;
@@ -11,6 +12,9 @@
         .social-list {
             width: 30%;
         }
+        a {
+            position: relative;
+        }
     }
 }
 
@@ -18,20 +22,39 @@
     p {
         color:var(--main-white);
         text-transform: uppercase;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     &__list {
         flex-direction: column;
-        gap: 30px;
+        gap:20px;
     }
     &__bigtext  {
         font-size: var(--h3-sepical-font);
         text-transform: uppercase;
         display: block;
         color:var(--main-white);
+        position: relative;
+        width: fit-content;
+        padding-bottom: 15px;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff; /* Цвет подчеркивания */
+            transform: scaleX(0); /* Начальное состояние - скрыто */
+            transform-origin: right; /* Начинаем анимацию с правого края */
+            transition: transform 0.4s ease; /* Плавная анимация */
+          }
     }
+   
 }
-
+.phone-1 {
+    margin-bottom: 20px;
+}
 .social-list {
     li {
         display: flex;
@@ -39,12 +62,51 @@
         align-items:center;
         border-bottom:1px solid var(--main-white);
         padding: 20px 0px;
+        transition: all 0.3s ease-in-out;
         a {
             font-size: var(--h3-font);
         text-transform: uppercase;
         display: block;
         color:var(--main-white);
         
+        }
+    }
+}
+@include mq(tablet-wide, min) {
+    .contact-list {
+        &__bigtext{
+            @include hover {
+                &::after {
+                    transform: scaleX(1); /* Растягиваем подчеркивание по ширине */
+                    transform-origin: left; /* Анимация слева направо */
+                    transition: transform 0.4s ease;
+                  }
+            }
+        }
+    }
+    .social-list {
+        ul {
+            li {
+                @include hover {
+                    padding-right: 20px;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@include mq(tablet-wide, max) {
+    .section-contact {
+        &__block {
+            flex-direction: column;
+            gap: 40px;
+        }
+        .contact-list {
+            width: 100%;
+        }
+        .social-list {
+            width: 100%;
         }
     }
 }

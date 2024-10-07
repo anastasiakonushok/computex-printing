@@ -22,15 +22,17 @@ const css = () => {
       })
     )
     .pipe(concat("main.css"))
-    .pipe(cssimport())
-    .pipe(webpCss())
-    .pipe(autoprefixer())
+     .pipe(cssimport())
+    // .pipe(webpCss())
+    // .pipe(autoprefixer())
     .pipe(shorthand())
     .pipe(groupCssMediaQueries())
-    .pipe(dest(path.css.dest, { sourcemaps: app.isDev }))
+    // .pipe(dest(path.css.dest, { sourcemaps: app.isDev }))
+    .pipe(dest(path.scss.dest))
     .pipe(rename({suffix:".min"}))
     .pipe(csso())
-    .pipe(dest(path.css.dest, { sourcemaps: app.isDev }));
+    // .pipe(dest(path.css.dest, { sourcemaps: app.isDev }));
+    .pipe(dest(path.scss.dest))
 };
 
 module.exports = css;

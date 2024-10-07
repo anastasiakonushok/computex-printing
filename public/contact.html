@@ -28,16 +28,18 @@
       </div>
     </header>
     <main class="main">
-      <div class="section-contact section-hero"> 
+      <section class="section-hero"> 
+        <div class="container">
+          <h1>Контакты</h1>
+        </div>
+      </section>
+      <section class="section-contact">
         <div class="container"> 
-          <div class="section-hero__title"> 
-            <h1>Контакты</h1>
-          </div>
           <div class="section-contact__block flex">
             <div class="contact-list"> 
               <ul class="flex contact-list__list">
                 <li class="contact-list__item">  
-                  <p class="contact-list__title">телефоны</p><a class="contact-list__bigtext" href="">+375 (29) 984-27-37 </a><a class="contact-list__bigtext" href=""> +375 (29) 984-27-37 </a>
+                  <p class="contact-list__title">телефоны</p><a class="contact-list__bigtext phone-1" href="">+375 (29) 984-27-37 </a><a class="contact-list__bigtext phone-2" href=""> +375 (29) 984-27-37 </a>
                 </li>
                 <li class="contact-list__item"> 
                   <p class="contact-list__title">адрес</p><a class="contact-list__bigtext" href="">ГОМЕЛЬ УЛ. КИРОВА, 35</a>
@@ -46,7 +48,11 @@
                   <p class="contact-list__title">почта</p><a class="contact-list__bigtext" href="">123@mail.ru</a>
                 </li>
                 <li class="contact-list__item"> 
-                  <p class="contact-list__title">реквизиты</p><a class="contact-list__bigtext" href="">123@mail.ru</a>
+                  <p class="contact-list__title">реквизиты</p>
+                  <div class="contact-list__bigtext">
+                    УНП 490681314 Р/с BY69OLMP30128000300600000933 Банк: ОАО "Белгазпромбанк",
+                    г.Гомель пр. Октября д.22а Код банка OLMPBY2X
+                  </div>
                 </li>
               </ul>
             </div>
@@ -74,21 +80,21 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="footer"> 
-      <div class="container footer__container">
-        <div class="footer__wrapp flex"></div>
-        <div class="button-up">
-          <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18L7 18ZM8.70711 0.292892C8.31658 -0.0976314 7.68342 -0.0976315 7.29289 0.292892L0.928933 6.65685C0.538408 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65686L8.70711 0.292892ZM9 18L9 1L7 1L7 18L9 18Z" fill="currentColor"></path>
-          </svg>
-        </div>
-        <div class="footer__copyright">
-          <p>
-             © 2024 "COMPUTEX".  </p>
-        </div>
+      <div class="container footer__container"><span class="super-text">computex</span>
+        <nav class="footer__nav flex">
+          <ul> 
+            <li> <a href="">оплаты и доставка</a></li>
+            <li> <a href="">портфолио</a></li>
+            <li> <a href="">услуги</a></li>
+            <li> <a href="">юр. лица</a></li>
+            <li> <a href="">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
+      <div id="map"></div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js">   </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

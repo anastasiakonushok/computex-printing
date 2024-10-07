@@ -12,11 +12,14 @@ html {
     outline: 0;
     outline-offset: 0;
 }
-
+main {
+    position: relative;
+    z-index: 10;
+}
 body {
     overflow-x: hidden;
     background: var(--bg-color);
-    font-family:'Travels';
+    font-family:var( --body-font);
     color:var(--dark-color);
 }
 .body-lock {
@@ -93,7 +96,7 @@ h2 {
     font-family: 'Travels';
     font-size: var(--h2-font);
     font-weight: 700;
-    line-height: 109%;
+    line-height: 140%;
     text-transform: uppercase;
 }
 .text-sub {
@@ -392,6 +395,17 @@ h2 {
     }
 }
 @include mq(tablet-wide, max) { 
+    .text-sub {
+        flex-direction: column;
+        align-items:start;
+        gap: 20px;
+        p {
+            width: 100%;
+        }
+    }
+    .container {
+        padding: 0 20px;
+    }
     .styled-table {
         border:none;
 

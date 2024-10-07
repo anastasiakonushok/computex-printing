@@ -3,17 +3,18 @@ extends layout/app
 block page 
     include chunk/header-black
     main.main
-        .section-contact.section-hero 
+        section.section-hero 
+            .container
+                h1 Контакты
+        section.section-contact
             .container 
-                .section-hero__title 
-                    h1 Контакты
                 .section-contact__block.flex
                     .contact-list 
                         ul.flex.contact-list__list
                             li.contact-list__item   
                                 p.contact-list__title телефоны
-                                a(href="").contact-list__bigtext +375 (29) 984-27-37 
-                                a(href="").contact-list__bigtext  +375 (29) 984-27-37 
+                                a(href="").contact-list__bigtext.phone-1 +375 (29) 984-27-37 
+                                a(href="").contact-list__bigtext.phone-2  +375 (29) 984-27-37 
                             li.contact-list__item 
                                 p.contact-list__title адрес
                                 a(href="").contact-list__bigtext ГОМЕЛЬ УЛ. КИРОВА, 35
@@ -22,7 +23,9 @@ block page
                                 a(href="").contact-list__bigtext 123@mail.ru
                             li.contact-list__item 
                                 p.contact-list__title реквизиты
-                                a(href="").contact-list__bigtext 123@mail.ru
+                                .contact-list__bigtext УНП 490681314 
+                                    | Р/с BY69OLMP30128000300600000933 Банк: ОАО "Белгазпромбанк",
+                                    | г.Гомель пр. Октября д.22а Код банка OLMPBY2X
                     .social-list 
                         ul 
                             li 

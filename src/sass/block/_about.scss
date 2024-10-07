@@ -1,4 +1,5 @@
 .section-about {
+    overflow: hidden;
     background: linear-gradient(180deg, #f6f6f8 18.61%, #bfff0a 100%);
     // background: linear-gradient(to bottom, #ffffff, #e6ff66, #ccff33, #bfff0a);
     padding: 100px 0px 150px 0px;
@@ -46,5 +47,26 @@
         display: inline-block;
         left: -20px;
         top: 10px;
+    }
+}
+
+@include mq(tablet-wide, max) { 
+    .section-about  {
+        &__info {
+            width: 100%;
+        }
+        ul {
+            li {
+                align-items:start;
+                flex-direction: column;
+                gap: 20px;
+                h3 {
+                    width: 100%;
+                }
+                p {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
