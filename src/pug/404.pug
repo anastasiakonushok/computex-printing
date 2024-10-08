@@ -1,0 +1,14 @@
+extends layout/app
+
+block page 
+    include chunk/header-black
+    main.main
+        section.section-404
+            .container.section-404__container
+                .section-404__card 
+                    h1 404
+                    p Ooops...   
+                    a(href="./index.html").main-button-white Главная страница 
+        include chunk/section-contact
+    include chunk/footer
+

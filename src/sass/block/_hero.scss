@@ -51,6 +51,7 @@
     object-fit: cover;
     margin-left: auto;
     margin-top: 60px;
+    border-radius:15px;
   }
 }
 .super-text {
@@ -120,5 +121,8 @@
       h1 {
         width: 100%;
       }
+    }
+    .background {
+      width: 100%;
     }
   }

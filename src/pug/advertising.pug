@@ -1,0 +1,70 @@
+extends layout/app
+
+block page 
+    include chunk/header-black
+    main.main
+        section.text-sub.section-hero
+            .container.section-hero__container
+                .text-sub__wrapp.flex
+                    h1 Воплощаем ваши идеи в эффективную наружную рекламу
+                    p Привлекайте внимание к вашему бизнесу с помощью яркой и качественной наружной рекламы. Мы предлагаем разработку и печать баннеров, вывесок и рекламных щитов для эффективного продвижения на улицах города.
+                a(href="./contact.html").main-button-white контакты 
+                img(src="./img/work-1.jpg" alt="").section-hero__img
+        section.section-plus 
+            .container 
+                .section-plus__wrapp.flex 
+                    .section-plus__block
+                        span.section-plus__title.title-pur 1 - 2
+                        span.section-plus__text дня печать сложных заказов
+                    .section-plus__block 
+                        span.section-plus__title.title-orange 300+ 
+                        span.section-plus__text видов продукции
+                    .section-plus__block 
+                        span.section-plus__title.title-green >1000 
+                        span.section-plus__text довольных клиентов
+                    .section-plus__block 
+                        span.section-plus__title.title-pink 100%
+                        span.section-plus__text контроль качества и гарантии
+        section.section-service
+            .container 
+                .text-sub.flex
+                    h2 Подробности услуги
+                    p Наша компания предлагает полный спектр полиграфических услуг, которые подчеркнут ваш бренд и помогут достичь ваших целей. Мы гарантируем высокое качество и индивидуальный подход к каждому проекту.
+                .section-service__wrapp.flex
+                    .section-service__block.section-service__img 
+                        img(src="./img/work-1.jpg" alt="")
+                    .section-service__block.section-service__list
+                        .accordion-wrapp
+                            .accordion
+                                .accordion__title 
+                                    h3 Визитки
+                                .accordion__body.inner-content 
+                                    p Создайте первое впечатление, которое запомнится, с нашими уникальными визитками. Мы предлагаем разнообразные форматы и материалы, чтобы ваши визитки стали настоящей визитной карточкой вашего бизнеса.
+                                    ul 
+                                        li Стандартные и премиум визитки
+                                        li Дизайн визиток под ключ
+                                        li Печать на различных типах бумаги
+                                        li Ламинация и другие виды отделки
+                            .accordion
+                                .accordion__title 
+                                    h3 Блокноты
+                                .accordion__body.inner-content
+                                    p Создайте первое впечатление, которое запомнится, с нашими уникальными визитками. Мы предлагаем разнообразные форматы и материалы, чтобы ваши визитки стали настоящей визитной карточкой вашего бизнеса.
+                                    ul  
+                                        li Стандартные и премиум визитки
+                                        li Дизайн визиток под ключ
+                                        li Печать на различных типах бумаги
+                                        li Ламинация и другие виды отделки
+                            .accordion
+                                .accordion__title 
+                                    h3 Открытки
+                                .accordion__body.inner-content  
+                                    p Создайте первое впечатление, которое запомнится, с нашими уникальными визитками. Мы предлагаем разнообразные форматы и материалы, чтобы ваши визитки стали настоящей визитной карточкой вашего бизнеса.
+                                    ul  
+                                        li Стандартные и премиум визитки
+                                        li Дизайн визиток под ключ
+                                        li Печать на различных типах бумаги
+                                        li Ламинация и другие виды отделки
+        include chunk/section-contact
+    include chunk/footer
+

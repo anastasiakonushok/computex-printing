@@ -92,117 +92,118 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Создаем timeline для последовательной анимации
 const tl = gsap.timeline();
+if (window.innerWidth > 1024) {
+    // Анимация для закрашивания фона
+    tl.to(".background", {
+        duration: 2,
+        width: "100%",
+        ease: "expo.inOut"
+    });
 
-// Анимация для закрашивания фона
-tl.to(".background", {
-    duration: 2,
-    width: "100%",
-    ease: "expo.inOut"
-});
+    // Анимация появления текста по буквам после закрашивания фона
+    tl.from(".hero__title span", {
+        duration: 1.5,
+        opacity: 0,
+        y: -50,
+        ease: "expo.out",
+        stagger: 0.1 // Задержка между появлением каждой буквы
+    }, "-=1.5") // Запуск анимации текста спустя 1.5 сек от начала анимации фона
 
-// Анимация появления текста по буквам после закрашивания фона
-tl.from(".hero__title span", {
-    duration: 1.5,
-    opacity: 0,
-    y: -50,
-    ease: "expo.out",
-    stagger: 0.1 // Задержка между появлением каждой буквы
-}, "-=1.5") // Запуск анимации текста спустя 1.5 сек от начала анимации фона
+    // Анимация для h1 после появления заголовка
+    tl.from(".hero h1", {
+        duration: 2,
+        opacity: 0,
+        y: 50,
+        ease: "expo.out",
+        delay: 0.3
+    }, "-=1.5"); // Запуск анимации h1 спустя 1 сек после старта появления букв
 
-// Анимация для h1 после появления заголовка
-tl.from(".hero h1", {
-    duration: 2,
-    opacity: 0,
-    y: 50,
-    ease: "expo.out",
-    delay: 0.3
-}, "-=1.5"); // Запуск анимации h1 спустя 1 сек после старта появления букв
+    // Анимация для секции "Наши Преимущества"
+    gsap.from(".section-about__text h2", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "expo.out",
+        scrollTrigger: {
+            trigger: ".section-about",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
 
-// Анимация для секции "Наши Преимущества"
-gsap.from(".section-about__text h2", {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: "expo.out",
-    scrollTrigger: {
-        trigger: ".section-about",
-        start: "top 80%",
-        toggleActions: "play none none none"
-    }
-});
+    gsap.from(".section-about__text p", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "expo.out",
+        delay: 0.5,
+        scrollTrigger: {
+            trigger: ".section-about",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
 
-gsap.from(".section-about__text p", {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: "expo.out",
-    delay: 0.5,
-    scrollTrigger: {
-        trigger: ".section-about",
-        start: "top 80%",
-        toggleActions: "play none none none"
-    }
-});
+    gsap.from(".main-button-dark", {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        ease: "expo.out",
+        delay: 0.8,
+        scrollTrigger: {
+            trigger: ".section-about",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
 
-gsap.from(".main-button-dark", {
-    opacity: 0,
-    y: 30,
-    duration: 1,
-    ease: "expo.out",
-    delay: 0.8,
-    scrollTrigger: {
-        trigger: ".section-about",
-        start: "top 80%",
-        toggleActions: "play none none none"
-    }
-});
-
-// Анимация для списка li с использованием stagger
-gsap.from(".section-about__info li", {
-    opacity: 0,
-    x: 100, // Появление справа
-    duration: 1,
-    ease: "expo.out",
-    stagger: 0.5, // Задержка между анимациями элементов
-    scrollTrigger: {
-        trigger: ".section-about__info",
-        start: "top 80%",
-        toggleActions: "play none none none"
-    }
-});
-
-
-// Анимация для списка li с использованием stagger
-gsap.from(".accordion", {
-    opacity: 0,
-    x: 100, // Появление справа
-    duration: 1,
-    ease: "expo.out",
-    stagger: 0.5, // Задержка между анимациями элементов
-    scrollTrigger: {
-        trigger: ".accordion-wrapp",
-        start: "top 80%",
-        toggleActions: "play none none none"
-    }
-});
-
-// Анимация для header, который появляется сверху
-gsap.from("header", {
-    y: -100, // Начальная позиция выше экрана
-    opacity: 0, // Начальная прозрачность
-    duration: 1, // Длительность анимации
-    ease: "expo.out", // Плавная анимация
-});
+    // Анимация для списка li с использованием stagger
+    gsap.from(".section-about__info li", {
+        opacity: 0,
+        x: 100, // Появление справа
+        duration: 1,
+        ease: "expo.out",
+        stagger: 0.5, // Задержка между анимациями элементов
+        scrollTrigger: {
+            trigger: ".section-about__info",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
 
 
-gsap.to(".section-hero__img", {
-    width: "100%", // Увеличение ширины до 100%
-    ease: "power1.out", // Плавное изменение
-    scrollTrigger: {
-        trigger: ".section-plus", // Триггер для активации анимации
-        start: "top 90%", // Анимация запускается, когда секция на 80% видна
-        end: "top 10%", // Анимация заканчивается, когда секция на 20% видна
-        scrub: true, // Плавная анимация, синхронизированная со скроллом
-        toggleActions: "play none none none", // Поведение при прокрутке
-    }
-});
+    // Анимация для списка li с использованием stagger
+    gsap.from(".accordion", {
+        opacity: 0,
+        x: 100, // Появление справа
+        duration: 1,
+        ease: "expo.out",
+        stagger: 0.5, // Задержка между анимациями элементов
+        scrollTrigger: {
+            trigger: ".accordion-wrapp",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    // Анимация для header, который появляется сверху
+    gsap.from("header", {
+        y: -100, // Начальная позиция выше экрана
+        opacity: 0, // Начальная прозрачность
+        duration: 1, // Длительность анимации
+        ease: "expo.out", // Плавная анимация
+    });
+
+
+    gsap.to(".section-hero__img", {
+        width: "100%", // Увеличение ширины до 100%
+        ease: "power1.out", // Плавное изменение
+        scrollTrigger: {
+            trigger: ".section-plus", // Триггер для активации анимации
+            start: "top 90%", // Анимация запускается, когда секция на 80% видна
+            end: "top 10%", // Анимация заканчивается, когда секция на 20% видна
+            scrub: true, // Плавная анимация, синхронизированная со скроллом
+            toggleActions: "play none none none", // Поведение при прокрутке
+        }
+    });
+}
