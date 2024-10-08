@@ -119,6 +119,9 @@ h2 {
         align-items:end;
         margin-bottom: 40px;
     }
+    h2 {
+        width: 50%;
+    }
 }
 .button-primary {
     @include button-orange(15px 30px);
@@ -161,7 +164,7 @@ h2 {
         margin-bottom: 30px;
     }
     p {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     ul {
         padding-left: 15px;
@@ -169,6 +172,9 @@ h2 {
         li {
             margin-bottom: 15px;
             @include regular;
+            &::marker {
+                color:var(--main-orange);
+            }
         }
     }
     b {

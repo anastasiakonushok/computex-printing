@@ -2,4 +2,37 @@
     background: var(--main-pur);
     padding: 100px 0px;
     color:var(--main-white);
+    &__wrapp {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img {
+        width: 40%;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius:15px;
+        }
+    }
+    &__list {
+        width: 55%;
+
+        .accordion-wrapp {
+            width: 100%;
+            margin-left: 0;
+        }
+        .accordion {
+            &__title {
+                border-bottom: 1px solid rgb(255 255 255);
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 33.75L33.75 11.25' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M15.4688 11.25H33.7499V29.5312' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+                }
+            }
+            &__body {
+                background:#4136bc;
+                color:var(--main-white);
+            }
+        }
+    }
 }
