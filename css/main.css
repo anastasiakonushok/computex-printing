@@ -478,7 +478,12 @@ h2 {
   font-size: 12em;
 }
 
+.section-404 p {
+  color: var(--main-white);
+}
+
 .section-404__container {
+  display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -1023,6 +1028,7 @@ h2 {
   object-fit: cover;
   margin-left: auto;
   margin-top: 60px;
+  border-radius: 15px;
 }
 
 .super-text {
@@ -1730,6 +1736,10 @@ h2 {
   }
 
   .hero h1 {
+    width: 100%;
+  }
+
+  .background {
     width: 100%;
   }
 
