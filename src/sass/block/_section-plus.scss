@@ -14,7 +14,8 @@
         color:var(--main-white);
         text-transform: uppercase;
         font-size: 12px;
-        width: 70%;
+        width: 75%;
+        line-height: 140%;
     }
     &__block {
         display: flex;
@@ -33,5 +34,20 @@
     }
     .title-pink {
         color: var(--main-pink);
+    }
+}
+
+@include mq(tablet-wide, max) { 
+    .section-plus {
+        &__wrapp {
+            flex-direction: column;
+        }
+        &__block {
+            text-align: center;
+            align-items:center;
+        }
+        &__text {
+            width: 90%;
+        }
     }
 }

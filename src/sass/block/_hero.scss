@@ -125,4 +125,12 @@
     .background {
       width: 100%;
     }
+    .section-hero {
+       h1 {
+        width: 100%;
+       }
+       &__img {
+        width: 100%;
+       }
+    }
   }

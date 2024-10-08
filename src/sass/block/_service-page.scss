@@ -36,3 +36,18 @@
         }
     }
 }
+
+@include mq(tablet-wide, max) {
+    .section-service{
+        &__wrapp {
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__list {
+            width: 100%;
+        }
+    }
+}

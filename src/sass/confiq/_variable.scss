@@ -27,7 +27,7 @@
     --regular-font: 1em;
     --second-font: 1.5em;
     --20-font:1.3em;
-    --font-128:5em;
+    --font-128:15em;
     --big-text:30em;
 
     @include mq(desktop, max) {
@@ -44,6 +44,7 @@
         --font-128:3em;
         --second-font: 1em;
         --big-text:15em;
+        --font-128:9em;
     }
     @include mq(phablet, max) {
         --h1-special: 1.9em;
@@ -55,6 +56,7 @@
         --second-font: 1em;
         --big-text:10em;
         --20-font:1.1em;
+        --font-128:9em;
     }
 
     // @include mq-height("tablet", max) {

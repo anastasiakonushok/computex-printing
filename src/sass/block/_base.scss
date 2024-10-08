@@ -144,10 +144,12 @@ h2 {
     height: calc(100vh - 115px);
     h1 {
         color:var(--main-orange);
-        font-size: 12em;
+        font-size: var(--font-128);
     }
     p {
         color:var(--main-white);
+        text-align: center;
+        width: 60%;
     }
     &__container{
         display: flex;
@@ -436,6 +438,9 @@ h2 {
         align-items:start;
         gap: 20px;
         }
+        h2 {
+            width: 100%;
+        }
     }
     .container {
         padding: 0 20px;
@@ -482,6 +487,10 @@ h2 {
             top:10%;
             right: 0;
             display: none;
+        }
+    }
+    .section-404 {
+        p { width: 100%;
         }
     }
 }

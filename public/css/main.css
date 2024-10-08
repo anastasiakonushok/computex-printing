@@ -209,7 +209,7 @@ table {
   --regular-font: 1em;
   --second-font: 1.5em;
   --20-font: 1.3em;
-  --font-128: 5em;
+  --font-128: 15em;
   --big-text: 30em;
 }
 
@@ -475,11 +475,13 @@ h2 {
 
 .section-404 h1 {
   color: var(--main-orange);
-  font-size: 12em;
+  font-size: var(--font-128);
 }
 
 .section-404 p {
   color: var(--main-white);
+  text-align: center;
+  width: 60%;
 }
 
 .section-404__container {
@@ -1266,7 +1268,8 @@ h2 {
   color: var(--main-white);
   text-transform: uppercase;
   font-size: 12px;
-  width: 70%;
+  width: 75%;
+  line-height: 140%;
 }
 
 .section-plus__block {
@@ -1603,6 +1606,7 @@ h2 {
     --font-128: 3em;
     --second-font: 1em;
     --big-text: 15em;
+    --font-128: 9em;
   }
 
   .section-about .number {
@@ -1641,6 +1645,10 @@ h2 {
     flex-direction: column;
     align-items: start;
     gap: 20px;
+  }
+
+  .text-sub h2 {
+    width: 100%;
   }
 
   .container {
@@ -1696,6 +1704,10 @@ h2 {
     display: none;
   }
 
+  .section-404 p {
+    width: 100%;
+  }
+
   .section-contact__block {
     flex-direction: column;
     gap: 40px;
@@ -1743,6 +1755,14 @@ h2 {
     width: 100%;
   }
 
+  .section-hero h1 {
+    width: 100%;
+  }
+
+  .section-hero__img {
+    width: 100%;
+  }
+
   .section-portfolio__grid {
     grid-template-columns: 1fr;
     /* Одна колонка на мобильных устройствах */
@@ -1769,9 +1789,35 @@ h2 {
     width: 100%;
   }
 
+  .section-plus__wrapp {
+    flex-direction: column;
+  }
+
+  .section-plus__block {
+    text-align: center;
+    align-items: center;
+  }
+
+  .section-plus__text {
+    width: 90%;
+  }
+
   .all-service__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+  }
+
+  .section-service__wrapp {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section-service__img {
+    width: 100%;
+  }
+
+  .section-service__list {
+    width: 100%;
   }
 
   .section-works__grid {
@@ -1858,5 +1904,6 @@ h2 {
     --second-font: 1em;
     --big-text: 10em;
     --20-font: 1.1em;
+    --font-128: 9em;
   }
 }

@@ -1,0 +1,65 @@
+extends layout/app
+
+block page 
+    include chunk/header-black
+    main.main
+        section.text-sub.section-hero
+            .container.section-hero__container
+                .text-sub__wrapp.flex
+                    h1 Способы оплаты и доставка
+                    p Ваши заказы будут выполнены в кратчайшие сроки с сохранением высокого качества печати. Доверьте нам свою срочную печать.
+                a(href="./contact.html").main-button-white контакты 
+        section.section-plus 
+            .container 
+                .section-plus__wrapp.flex 
+                    .section-plus__block
+                        span.section-plus__title.title-pur 1 - 2
+                        span.section-plus__text дня печать сложных заказов
+                    .section-plus__block 
+                        span.section-plus__title.title-orange 300+ 
+                        span.section-plus__text видов продукции
+                    .section-plus__block 
+                        span.section-plus__title.title-green >1000 
+                        span.section-plus__text довольных клиентов
+                    .section-plus__block 
+                        span.section-plus__title.title-pink 100%
+                        span.section-plus__text контроль качества и гарантии
+        section.section-service
+            .container 
+                .text-sub.flex
+                    h2 Подробности услуги
+                .section-service__block.section-service__list
+                    .accordion-wrapp
+                        .accordion
+                            .accordion__title 
+                                h3 Оплата
+                            .accordion__body.inner-content 
+                                p Создайте первое впечатление, которое запомнится, с нашими уникальными визитками. Мы предлагаем разнообразные форматы и материалы, чтобы ваши визитки стали настоящей визитной карточкой вашего бизнеса.
+                                ul 
+                                    li Стандартные и премиум визитки
+                                    li Дизайн визиток под ключ
+                                    li Печать на различных типах бумаги
+                                    li Ламинация и другие виды отделки
+                        .accordion
+                            .accordion__title 
+                                h3 Доставка
+                            .accordion__body.inner-content
+                                p Создайте первое впечатление, которое запомнится, с нашими уникальными визитками. Мы предлагаем разнообразные форматы и материалы, чтобы ваши визитки стали настоящей визитной карточкой вашего бизнеса.
+                                ul  
+                                    li Стандартные и премиум визитки
+                                    li Дизайн визиток под ключ
+                                    li Печать на различных типах бумаги
+                                    li Ламинация и другие виды отделки
+                        .accordion
+                            .accordion__title 
+                                h3 Рассрочка
+                            .accordion__body.inner-content  
+                                p Создайте первое впечатление, которое запомнится, с нашими уникальными визитками. Мы предлагаем разнообразные форматы и материалы, чтобы ваши визитки стали настоящей визитной карточкой вашего бизнеса.
+                                ul  
+                                    li Стандартные и премиум визитки
+                                    li Дизайн визиток под ключ
+                                    li Печать на различных типах бумаги
+                                    li Ламинация и другие виды отделки
+        include chunk/section-contact
+    include chunk/footer
+
