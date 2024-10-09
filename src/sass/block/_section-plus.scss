@@ -36,7 +36,11 @@
         color: var(--main-pink);
     }
 }
-
+.section-pay {
+    .section-service__list {
+        width: 100%;
+    }
+}
 @include mq(tablet-wide, max) { 
     .section-plus {
         &__wrapp {

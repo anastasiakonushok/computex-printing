@@ -1,0 +1,37 @@
+extends layout/app
+
+block page 
+    include chunk/header-black
+    main.main
+        section.text-sub.section-hero
+            .container.section-hero__container
+                .text-sub__wrapp.flex
+                    h1 Тестовая страница
+                    p Ваши заказы будут выполнены в кратчайшие сроки с сохранением высокого качества печати. Доверьте нам свою срочную печать.
+                a(href="./contact.html").main-button-white контакты 
+        section.section-plus 
+            .container 
+                .section-plus__wrapp.flex 
+                    .section-plus__block
+                        span.section-plus__title.title-pur 1 - 2
+                        span.section-plus__text дня печать сложных заказов
+                    .section-plus__block 
+                        span.section-plus__title.title-orange 300+ 
+                        span.section-plus__text видов продукции
+                    .section-plus__block 
+                        span.section-plus__title.title-green >1000 
+                        span.section-plus__text довольных клиентов
+                    .section-plus__block 
+                        span.section-plus__title.title-pink 100%
+                        span.section-plus__text контроль качества и гарантии
+        section.section-service.section-text.inner-content
+            .container 
+                h2 Lorem ipsum dolor sit.
+                ul 
+                    li Lorem ipsum dolor sit amet consectetur.
+                    li Lorem ipsum dolor sit amet consectetur.
+                    li Lorem ipsum dolor sit amet consectetur.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo pariatur iure magni voluptatem facere porro molestias, ipsum cum numquam suscipit iusto eligendi voluptates, quo cupiditate, distinctio assumenda minus a! Sit.
+        include chunk/section-contact
+    include chunk/footer
+
