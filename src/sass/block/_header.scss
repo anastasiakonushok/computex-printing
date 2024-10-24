@@ -14,6 +14,7 @@
                 color:var(--main-white);
                 text-transform: uppercase;
                 font-weight: 700;
+                transform: all 0.3s ease-in;
             }
         }
     }
@@ -48,6 +49,12 @@
         }
         .burger {
             display: none;
+        }
+        a {
+            @include hover {
+                color:var(--main-orange);
+                transform: all 0.3s ease-in;
+            }
         }
     }
 }
