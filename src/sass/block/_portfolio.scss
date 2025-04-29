@@ -4,18 +4,19 @@
         grid-template-columns: 1fr 1fr 1fr; /* Задаем фиксированные колонки */
         grid-template-rows: repeat(9, 100px); /* Задаем фиксированную высоту строк */
         column-gap: 3em; /* Промежутки между колонками */
-        row-gap: 5em; /* Промежутки между строками */
+        row-gap: 4em; /* Промежутки между строками */
     }
     &__block {
-        border-radius: 15px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        overflow: hidden;
         img {
             display: block;
             object-fit: cover;
             width: 100%;
             height: 100%;
+            max-height: 23em;
             border-radius: 15px;
         }
         h4 {

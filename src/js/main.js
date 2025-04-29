@@ -92,7 +92,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Создаем timeline для последовательной анимации
 const tl = gsap.timeline();
-if (window.innerWidth > 1024) {
+if (window.innerWidth > 800) {
     // Анимация для закрашивания фона
     tl.to(".background", {
         duration: 2,

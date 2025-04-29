@@ -34,7 +34,7 @@
         }
     }
     &__info {
-        padding: 40px;
+        padding: 30px;
         width: 100%;
         height: 100%;
         h3 {
@@ -42,7 +42,7 @@
             font-size: var(--20-font);
             text-transform: uppercase;
             font-weight: 600;
-            width: 83%;
+            width: 85%;
             line-height: 120%;
             position: relative;
             z-index: 10;
@@ -90,12 +90,25 @@
     
   }
 
+  @include mq(desktop, max) {
+    .all-service {
+        &__info {
+            padding: 20px;
+            h3 {
+                width: 100%;
+            }
+        }
+    }
+}
 
   @include mq(tablet-wide, max) {
     .all-service {
         &__container {
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: repeat(3,1fr);
+        }
+        &__info {
+            padding: 20px;
         }
     }
 }

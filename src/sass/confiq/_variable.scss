@@ -16,8 +16,8 @@
     --bg-footer:#1c1c1c;
     
     //font
-    --body-font: "Travels";
-    --big-font: 'Humane Bold';
+    --body-font: "Travels", Arial, sans-serif;
+    --big-font: 'Humane Bold', Arial, sans-serif;
     //font-size
     --h1-special: 2.8em;
     --h1-font: 2.2em;
@@ -33,6 +33,7 @@
     @include mq(desktop, max) {
         --h1-special: 2.5em;
         --big-text:20em;
+        --20-font:1.2em;
     }
     @include mq(tablet-wide, max) {
         --h1-special: 2em;
@@ -46,7 +47,7 @@
         --big-text:15em;
         --font-128:9em;
     }
-    @include mq(phablet, max) {
+    @include mq(tablet-small, max) {
         --h1-special: 1.9em;
         --h1-font: 1.6em;
         --h2-font: 1.5em;
@@ -57,6 +58,13 @@
         --big-text:10em;
         --20-font:1.1em;
         --font-128:9em;
+    }
+    @include mq(phablet, max) {
+        --h3-sepical-font: 1.1em;
+        --20-font:1em;
+    }
+    @include mq(phone, max) {
+        --h3-sepical-font: 1em;
     }
 
     // @include mq-height("tablet", max) {
