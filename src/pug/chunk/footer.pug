@@ -1,28 +1,63 @@
-footer.footer 
-  include chunk/section-contact
-  .footer__container
-    span.super-text computex
-    nav.footer__nav.flex.container
-      ul 
-        li 
-          a(href="./pay-page.html") оплата
-        li 
-          a(href="./portfolio.html") портфолио
-        li 
-          a(href="./index.html#id-service") услуги
-        li 
-          a(href="./contact.html") Контакты
-  div#map
-  .footer__wrapp.container.flex
-    p computex 2024 - коплексные решения  
-    .footer__column.flex
-      ul.flex
-        li 
-          a(href="./") кондиционеры
-        li
-          a(href="./") сервисный центр
-        li
-          a(href="./") печатный центр
+footer.footer(class=footerClass)
+    .section-contact 
+        .container 
+            h2 Связаться с нами
+            .section-contact__block.flex
+                .contact-list 
+                    ul.flex.contact-list__list
+                        li.contact-list__item   
+                            p.contact-list__title телефоны
+                            a(href="").contact-list__bigtext.phone-1 +375 (29) 984-27-37 
+                            a(href="").contact-list__bigtext.phone-2  +375 (29) 984-27-37 
+                        li.contact-list__item 
+                            p.contact-list__title адрес
+                            a(href="").contact-list__bigtext ГОМЕЛЬ УЛ. КИРОВА, 35
+                        li.contact-list__item 
+                            p.contact-list__title почта
+                            a(href="").contact-list__bigtext computex2013@mail.ru
+                .social-list 
+                    ul 
+                        li 
+                            a(href="").flex
+                                span instargram
+                                svg(width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M11.25 33.75L33.75 11.25" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    path(d="M15.4688 11.25H33.7499V29.5312" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                        li 
+                            a(href="").flex
+                                span viber
+                                svg(width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M11.25 33.75L33.75 11.25" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    path(d="M15.4688 11.25H33.7499V29.5312" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                        li 
+                            a(href="").flex 
+                                span telegram
+                                svg(width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M11.25 33.75L33.75 11.25" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    path(d="M15.4688 11.25H33.7499V29.5312" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+    .footer__container
+        span.super-text computex
+        nav.footer__nav.flex.container
+            ul 
+                li 
+                    a(href="./pay-page.html") оплата
+                li 
+                    a(href="./portfolio.html") портфолио
+                li 
+                    a(href="./index.html#id-service") услуги
+                li 
+                    a(href="./contact.html") Контакты
+    div#map
+    .footer__wrapp.container.flex
+        p computex 2024 - коплексные решения  
+        .footer__column.flex
+            ul.flex
+                li 
+                    a(href="./") кондиционеры
+                li
+                    a(href="./") сервисный центр
+                li
+                    a(href="./") печатный центр
 script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")    
 script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
 script(src="js/main.js")

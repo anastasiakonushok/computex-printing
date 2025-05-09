@@ -1,6 +1,13 @@
 #map {
     height: 150px;
 }
+.page-template-contact-page {
+    .section-contact {
+        h2 {
+            display: none;
+        }
+    }
+}
 .footer {
     overflow: hidden;
     position: relative;
@@ -16,6 +23,7 @@
     &__container {
         background:var(--main-orange);
         position: relative;
+        overflow: hidden;
     }
     &__nav {
         position: relative;
@@ -112,9 +120,11 @@
         }
     }
     .footer {
-        a {
-            @include hover {
-                color:var(--main-green);
+        &__nav {
+            a {
+                @include hover {
+                    color:var(--main-green);
+                }
             }
         }
     }
